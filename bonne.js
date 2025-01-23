@@ -16,7 +16,7 @@ function dadCar(name, model, year, image){
     this.carImg = image;
 }
 
-const MrgnPlus = new dadCar("Morgan Plus", 8, 1994, `<img src="cars\\1994morganPlus8.jpg" alt="Morgan">`);
+const MrgnPlus = new dadCar("Morgan Plus", 8, 1994, `<img src="cars\\1994 morgan plus 8.jpg" alt="Morgan">`);
 const PrwlrMull = new dadCar("Prowler Mullholland", "Edition", 2001, `<img src="cars\\2001 Prowler Mullholland Edition.jpeg"></img>`);
 
 document.getElementById("car1").innerHTML = MrgnPlus.carImg;
