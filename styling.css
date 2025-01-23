@@ -1,1 +1,49 @@
-/*you know what i am*/
+* {
+    margin: 0; padding: 0;
+    font-family: "Merriweather", serif;
+}
+body
+{ background-color: #e4a6bb;
+    font-size: 2em;
+    align-items: center; text-align: center; }
+
+h1, h2, h3
+{ font-family: "Playfair Display"; }
+.bleeeh
+{ background-color: #9efcdd; height: 20rem; width: 1fr; position: relative; }
+
+table.navibar
+{ /*background-color: bisque; */position: absolute; width: 100%;}
+
+td {width: 96px; /*background-color: orchid;*/}
+
+a.noStyleA {color: black; text-decoration: none;}
+a.noStyleA:hover {color: white;}
+
+.pTxt {font-family: "Quicksand"; font-size: 1rem; padding: 30px; padding-left: 90px; padding-right: 90px; /*background-color: goldenrod;*/ text-align: left;}
+
+.shift {background-color: cornflowerblue; margin: auto; padding-top: 30px; width: 900px; /*formerly width was 60%, until I realised the layout adapted to the viewport width, which was not a look I was going for*/}
+
+.gridalicious {background-color: purple; display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr);}
+    div.dish
+    { background-color: #facfde; height: 150px; font-size: 1rem; }
+        .dish:hover{filter: brightness(75%);}
+        .dish:active{filter: brightness(75%);}
+    div.dishMid {grid-column: 2/3;}
+
+.gridTemp1
+{
+    /*background-color: orchid;*/
+    width: 94%; margin-left: 2vw;
+    display: grid;
+    grid-template-columns: .11fr auto; grid-template-rows: 200px 500px;
+    margin-bottom: 20px;
+}
+/*#it1 {background-color: green;}*/
+#it2 {background-color: purple;}
+#it3 {width: 9vw; grid-column: 1/2; grid-row: 1/4; font-size: 12px;}
+
+#grTmp1pan {margin-left: 0.4vw; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;}
+#grTmp1pan > div {height: 3.9vw; background-color: bisque;}
+.panhght:hover {filter: brightness(80%);}
+.panhght:active {filter: brightness(70%);}
