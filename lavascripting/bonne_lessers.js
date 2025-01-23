@@ -1,15 +1,5 @@
 // the various functions pulled in the View functions
 
-
-// topView functions
-function gotoAbt(){ // sends you to the about page!
-    document.getElementById("page").innerHTML = "om";
-  };
-  
-function gotoCars(){ //sends you to the cars!
-    document.getElementById("page").innerHTML = "biler";
-  };
-
 // mainView functions
 function mainForLoops()
   {

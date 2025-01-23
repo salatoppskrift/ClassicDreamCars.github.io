@@ -75,7 +75,7 @@ function pageMain(){
     mainForLoops();
     carGallery();
 };
-    
+
 // BODY end
 // the footer BEGIN
 function foot(){
