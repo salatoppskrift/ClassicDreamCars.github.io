@@ -4,7 +4,7 @@ let gg = "Bring brang ba bring bram ba bring bram ba-bom";
 
 document.getElementsByTagName("title")[0].innerHTML = hmm;
 document.getElementById("hi").innerHTML += "" + gg;
-let ahaaa = document.getElementsByTagName("div")[2];
+let ahaaa = document.getElementById("two");
 ahaaa.innerHTML = "gyg";
 ahaaa.style = "color: cadetblue";
 
