@@ -18,16 +18,41 @@ function mainForLoops()
       document.getElementsByClassName("bleeeh")[i].style.height = size;
     };
 };
+let cgalvar = driveoutVideos.length - 1;
   
 function carGallery(){
     for(let i = 0; i < vehicleCollection.length; i++){
       /*let equalsOneOverThree = i % 3;
       if(equalsOneOverThree == 1) document.getElementsByClassName("dish")[i].classList.add("dishMid");*/
       document.getElementsByClassName("gridalicious")[0].innerHTML += /*HTML*/ `
-        <div class="dish" onclick = "viewCar(vehicleCollection[${i}])">item${i}</div>
+        <div class="dish cGal" onclick = "viewCar(vehicleCollection[${i}])">item${i}</div>
+      `;
+  };
+    if (vehicleCollection.length % 3 == 1) document.getElementsByClassName("cGal")[vehicleCollection.length - 1].classList.add("dishMid");
+    else if (vehicleCollection.length % 3 == 2) {
+      document.getElementsByClassName("cGal")[vehicleCollection.length - 1].classList.add("dishTwoMidTwo");
+      document.getElementsByClassName("cGal")[vehicleCollection.length - 2].classList.add("dishTwoMidOne");
+    }
+
+    for(let i = 0; i < driveoutVideos.length; i++){
+      document.getElementsByClassName("gridalicious")[1].innerHTML += /*HTML*/ `
+        <div class="dish vGal" onclick = "viewCar(driveoutVideos[${i}])">item${i}</div>
       `;
     };
+    if (driveoutVideos.length % 3 == 1) document.getElementsByClassName("vGal")[driveoutVideos.length - 1].classList.add("dishMid");
+
 };
+
+function ifScrolledEnough(){
+  let bttmNote = document.getElementById("bttmNote");
+  let scrollToNote = function() {
+    let y = window.scrollY;
+    if (y >= 600) bttmNote.className = "note show";
+    else bttmNote.className = "note hide";
+  }
+  window.addEventListener("scroll", scrollToNote);  
+};
+
 
 function viewCar(car){
   car.dddd();

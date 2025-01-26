@@ -18,18 +18,21 @@ table.navibar
 td {width: 96px; /*background-color: orchid;*/}
 
 a.noStyleA {color: black; text-decoration: none;}
-a.noStyleA:hover {color: white;}
+a.noStyleA:hover {color: white; transition: .5s;}
+a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
 
 .pTxt {font-family: "Quicksand"; font-size: 1rem; padding: 30px; padding-left: 90px; padding-right: 90px; /*background-color: goldenrod;*/ text-align: left;}
 
 .shift {background-color: cornflowerblue; margin: auto; padding-top: 30px; width: 900px; /*formerly width was 60%, until I realised the layout adapted to the viewport width, which was not a look I was going for*/}
 
-.gridalicious {background-color: purple; display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr);}
+.gridalicious {background-color: purple; display: grid; gap: 15px; grid-template-columns: repeat(18, 1fr);} /*formerly, repeat(3, 1fr); remade into 18 bc 3*2*3 (needed dishMid and wanted to make a new class to arrange something for i % 3 == 2) too, if I know my father right!*/
     div.dish
-    { background-color: #facfde; height: 150px; font-size: 1rem; }
+    { grid-column: span 6; background-color: #facfde; height: 150px; font-size: 1rem; }
         .dish:hover{filter: brightness(75%);}
         .dish:active{filter: brightness(75%);}
-    div.dishMid {grid-column: 2/3;}
+    div.dishMid {grid-column: 7/span 6;} /*formerly : 2/3*/
+    div.dishTwoMidOne {grid-column: 4/span 6;}
+    div.dishTwoMidTwo {grid-column: 10/span 6;}
 
 .gridTemp1
 {
@@ -42,6 +45,21 @@ a.noStyleA:hover {color: white;}
 /*#it1 {background-color: green;}*/
 #it2 {background-color: purple;}
 #it3 {width: 9vw; grid-column: 1/2; grid-row: 1/4; font-size: 12px;}
+
+
+.note {
+    position: fixed;
+    left: 39.7%;
+    bottom: 0;
+    align-items: center;
+    background-color: lightgray;
+    z-index: 1;
+    width: 20.6%;
+    transition: all 2s;
+    padding-top: 10px;
+}
+.hide {opacity: 0; bottom: -10%;}
+.show {opacity: 1; bottom: 30px;}
 
 #grTmp1pan {margin-left: 0.4vw; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;}
 #grTmp1pan > div {height: 3.9vw; background-color: bisque;}

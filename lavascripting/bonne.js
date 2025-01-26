@@ -10,71 +10,62 @@ foot();
 
 function topView(){
     document.getElementsByClassName("bleeeh")[0].innerHTML = /*HTML*/`
-    <div onclick="pageMain(); mainForLoops()" style="height: 180px;">Classic Dream Cars</div>
-    <div>
-        <table class="navibar">
-            <tr>
-                <td><a href="#Om" class="noStyleA">Om</a></td>
-                <td><a href="#Biler" class="noStyleA">Biler</a></td>
-                <td><a href="#Filmer" class="noStyleA">Filmer</a></td>
-                <td><a href="#Kjoreturer" class="noStyleA">Kjøreturer</a></td>
-                <td><a href="#YouTubeTips" class="noStyleA">YouTube Tips</a></td>
-                <td><a href="#Kontakt" class="noStyleA">Kontakt</a></td>
-            </tr>
-        </table>
-    </div>
+    <div onclick="pageMain(); mainForLoops()" style="height: 180px;" id = "Main">Classic Dream Cars</div>
+    <div id = "navibar"></div>
   `;
-/*  Dear diary, today (22-23jan 25) I recall my hubris from previous DRY mistake...
-  for (let i = 0; i <= titleItems.length; i++){
-    document.getElementsByClassName("navibar")[0].innerHTML += `
-      <td><a href="#${titleItems[i]}" class="noStyleA">${titleItems[i]}</a></td>
-    `;
-  };*/
+  navBarItems();
 };
+
+function navBarItems(){
+  deler[1].tit = "Biler";
+  deler[6].tit = "Kjøreturer";
+  const delerNav = [deler[0].tit, deler[1].tit, deler[3].tit, deler[6].tit, deler[5].tit, deler[7].tit];
+  let aaaa = "";
+
+  for(let i = 0; i < delerNav.length; i++){
+    let idNameIt = `#${delerNav[i]}`;
+    if (i == 4) idNameIt = "#YouTubeTips";
+    aaaa += /*HTML*/`<td><a href=${idNameIt} class="noStyleA">${delerNav[i]}</a></td>`;
+  }
+
+  document.getElementById("navibar").innerHTML = /*HTML*/ `
+    <table class="navibar">
+      <tr> <!-- Om   Biler   Filmer   Kjøreturer  YouTube Tips   Kontakt-->
+        ${aaaa}
+      </tr>
+    </table>
+  `;
+}
+
+//  Dear diary, today (22-23jan 25) I recall my hubris from previous DRY mistake...
+// Dear diary, today (24jan 25) I realised I'd forgotten to instantialise the variable I needed to have to access the names for the contents on the page (Om, Filmer, etc), and realised that the array I was using was not compatible with the navBar's items, for example in the bar YTtips and Kjøreturer must switch places from how it is on the page, hence I made a new array with the new arrangement and lacking the "intet" ones.
 
 function pageMain(){
     document.getElementById("page").innerHTML = /*HTML*/`
-      <div class="shift" id = "Om">Om</div>
+      <div class="shift" id = "Om"></div>
       <div class="bleeeh"></div>
-      <div class="shift" id = "Biler">
-        Biler
-      </div>
+      <div class="shift" id = "Biler"></div>
       <div class="shift">
         <div class="gridalicious">
             <!--see "lavaskript.js" from "new car website" folder on local computer to see how we used to live-->
         </div>
       </div>
-      <div class="shift" id = "Filmer">Filmer</div>
+      <div class="shift" id = "Filmer"></div>
       <div class="shift">
         <div class="gridalicious">
-            <div class="dish">item1</div>
-            <div class="dish">item2</div>
-            <div class="dish">item1</div>
-            
-            <div class="dish">item1</div>
-            <div class="dish">item2</div>
-            <div class="dish">item1</div>
-  
-            <div class="dish">item1</div>
-            <div class="dish">item2</div>
-            <div class="dish">item3 (anxiety purged)</div>
-            <div class="dish dishMid">item4</div>
-            </div>
         </div>
-      <div class="shift" id = "YouTubeTips">
-        YT Tips
-      </div>
-      <div class="shift" id = "Kjoreturer">
-        Kjøreturer
-      </div>
+      <div class="shift" id = "YouTubeTips"></div>
+      <div class="shift" id = "Kjøreturer"></div>
       <div class="bleeeh"></div>
-      <div class="shift" id = "Kontakt">
-        Kontakt
-      </div>
+      <div class="shift" id = "Kontakt"></div>
     `;
     mainForLoops();
     carGallery();
+    ifScrolledEnough();
 };
+
+
+
 
 // BODY end
 // the footer BEGIN

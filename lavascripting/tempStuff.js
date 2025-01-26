@@ -7,3 +7,40 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 `; // EXAMPLE TEXT. ALSO DELETE LATER.
 
 let bildetemp = "bilde"; // DELETE LATER REPLACE W IMAGE SOURCE THING
+
+/*function deletethisLaterNeverUsethisplease(){
+    document.getElementById("navibar").innerHTML = `
+    <div id = "navibar">
+
+    <table class="navibar">
+      <tr> <!-- Om   Biler   Filmer   Kjøreturer  YouTube Tips   Kontakt-->
+        <td><a href="#Om" class="noStyleA">${delerNav[0]}</a></td>
+        <td><a href="#Biler" class="noStyleA">${delerNav[1]}</a></td>
+        <td><a href="#Filmer" class="noStyleA">${delerNav[2]}</a></td>
+        <td><a href="#Kjøreturer" class="noStyleA">${delerNav[3]}</a></td>
+        <td><a href="#YouTubeTips" class="noStyleA">${delerNav[4]}</a></td>
+        <td><a href="#Kontakt" class="noStyleA">${delerNav[5]}</a></td>
+      </tr>
+    </table>;
+
+    </div>
+
+
+    Meanwhile, here is the old Filmer set-up:
+    <div class="shift" id = "Filmer"></div>
+      <div class="shift">
+        <div class="gridalicious">
+            <div class="dish">item2</div>
+            <div class="dish">item1</div>
+            
+            <div class="dish">item1</div>
+            <div class="dish">item2</div>
+            <div class="dish">item1</div>
+  
+            <div class="dish">item1</div>
+            <div class="dish">item2</div>
+            <div class="dish">item3 (anxiety purged)</div>
+            <div class="dish dishMid">item4</div> <-- THIS IN PARTICULAR IS WHY WE KEEP NOTES.
+            </div>
+        </div>
+}*/

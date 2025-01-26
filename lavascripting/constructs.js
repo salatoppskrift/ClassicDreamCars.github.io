@@ -12,11 +12,11 @@ function tittlInnhold(tittel, innhold){
     };
 };
 
-function dadCar(name, model, year, imge){
+function dadCar(name, model, year, imageOrVideoFile){
     this.carName = name;
     this.carMod = model;
     this.carYear = year;
-    this.carImg = imge;
+    this.carFile = imageOrVideoFile;
     this.dddd = function(){
       document.getElementsByClassName("bleeeh")[0].style.height = "300px";
       let entry = "";
@@ -25,7 +25,7 @@ function dadCar(name, model, year, imge){
       document.getElementById("page").innerHTML = /*HTML*/`
       <div class = "gridTemp1">
         <div id = "it1" class="pTxt">${this.carName} ${this.carMod}</div>
-        <div id = "it2">${this.carImg}</div>
+        <div id = "it2">${this.carFile}</div>
         <div id = "it3">
           <div id = "grTmp1pan">${entry}</div>
         </div>
