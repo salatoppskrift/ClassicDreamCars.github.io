@@ -40,7 +40,6 @@ function carGallery(){
       `;
     };
     if (driveoutVideos.length % 3 == 1) document.getElementsByClassName("vGal")[driveoutVideos.length - 1].classList.add("dishMid");
-
 };
 
 function ifScrolledEnough(){
@@ -52,7 +51,6 @@ function ifScrolledEnough(){
   }
   window.addEventListener("scroll", scrollToNote);  
 };
-
 
 function viewCar(car){
   car.dddd();

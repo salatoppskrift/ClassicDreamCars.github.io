@@ -54,6 +54,7 @@ function pageMain(){
       <div class="shift">
         <div class="gridalicious">
         </div>
+      </div>
       <div class="shift" id = "YouTubeTips"></div>
       <div class="shift" id = "Kjøreturer"></div>
       <div class="bleeeh"></div>
