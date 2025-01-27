@@ -11,6 +11,10 @@ function mainForLoops()
         document.getElementsByClassName("pTxt")[3].style.paddingRight = "30px";
       };
     };
+    /*for(let i = 2; i < 4; i++){
+      if (i == 2) document.getElementsByClassName[i].style.width = "";
+      i+=2;
+    }; <--- trying to make the actual galleries stretch to bleeeh's size (how it behaves horizontally, bc I realised too late they weren't supposed to be fixedly contained like the text was!!!*/
     for(let i = 0; i<3; i++){
       let size = "44rem";
       if (i == 1) size = "48rem";
@@ -21,12 +25,10 @@ function mainForLoops()
 let cgalvar = driveoutVideos.length - 1;
   
 function carGallery(){
-    for(let i = 0; i < vehicleCollection.length; i++){
-      /*let equalsOneOverThree = i % 3;
-      if(equalsOneOverThree == 1) document.getElementsByClassName("dish")[i].classList.add("dishMid");*/
-      document.getElementsByClassName("gridalicious")[0].innerHTML += /*HTML*/ `
+  for(let i = 0; i < vehicleCollection.length; i++){
+    document.getElementsByClassName("gridalicious")[0].innerHTML += /*HTML*/ `
         <div class="dish cGal" onclick = "viewCar(vehicleCollection[${i}])">item${i}</div>
-      `;
+    `;
   };
     if (vehicleCollection.length % 3 == 1) document.getElementsByClassName("cGal")[vehicleCollection.length - 1].classList.add("dishMid");
     else if (vehicleCollection.length % 3 == 2) {
@@ -34,11 +36,11 @@ function carGallery(){
       document.getElementsByClassName("cGal")[vehicleCollection.length - 2].classList.add("dishTwoMidOne");
     }
 
-    for(let i = 0; i < driveoutVideos.length; i++){
-      document.getElementsByClassName("gridalicious")[1].innerHTML += /*HTML*/ `
+  for(let i = 0; i < driveoutVideos.length; i++){
+    document.getElementsByClassName("gridalicious")[1].innerHTML += /*HTML*/ `
         <div class="dish vGal" onclick = "viewCar(driveoutVideos[${i}])">item${i}</div>
-      `;
-    };
+    `;
+  };
     if (driveoutVideos.length % 3 == 1) document.getElementsByClassName("vGal")[driveoutVideos.length - 1].classList.add("dishMid");
 };
 

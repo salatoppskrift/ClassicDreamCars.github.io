@@ -15,13 +15,11 @@ const deler = [om, bilr, intet, filmr, intet, ytbtip, drives, cntct];
 
 // se constructs.js for konstruktor til dadCar!
 
-const MrgnPlus = new dadCar("Morgan Plus", 8, 1994, `<img src="cars\\1994 morgan plus 8.jpg" alt="Morgan">`);
 const PrwlrMull = new dadCar("Prowler Mullholland", "Edition", 2001, `<img src="cars\\2001 Prowler Mullholland Edition.jpeg"></img>`);
 const car2 = new dadCar("a", "b", 1, "d");
 
 // array til å hente biler.
-const vehicleCollection = [MrgnPlus, PrwlrMull,
-    car2, car2, car2
+const vehicleCollection = [car2, car2, car2, car2, car2
 ];
 
 

@@ -10,7 +10,9 @@ foot();
 
 function topView(){
     document.getElementsByClassName("bleeeh")[0].innerHTML = /*HTML*/`
-    <div onclick="pageMain(); mainForLoops()" style="height: 180px;" id = "Main">Classic Dream Cars</div>
+    <div style="height: 180px;" id = "Main">
+      <a href="#Main"><img id = "logo" src="ClaDreCarLogo.png" alt="logo: Classic Dream Cars" onclick="pageMain(); mainForLoops()"></a>
+    </div>
     <div id = "navibar"></div>
   `;
   navBarItems();
@@ -64,7 +66,6 @@ function pageMain(){
     carGallery();
     ifScrolledEnough();
 };
-
 
 
 

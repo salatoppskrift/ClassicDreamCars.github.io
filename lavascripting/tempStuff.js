@@ -8,6 +8,13 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 let bildetemp = "bilde"; // DELETE LATER REPLACE W IMAGE SOURCE THING
 
+/*
+THE DUMP
+
+const MrgnPlus = new dadCar("Morgan Plus", 8, 1994, `<img src="cars\\1994 morgan plus 8.jpg" alt="Morgan">`);
+
+ */
+
 /*function deletethisLaterNeverUsethisplease(){
     document.getElementById("navibar").innerHTML = `
     <div id = "navibar">
