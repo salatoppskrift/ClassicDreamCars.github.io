@@ -27,7 +27,7 @@ function navBarItems(){
   for(let i = 0; i < delerNav.length; i++){
     let idNameIt = `#${delerNav[i]}`;
     if (i == 4) idNameIt = "#YouTubeTips";
-    aaaa += /*HTML*/`<td><a href=${idNameIt} class="noStyleA">${delerNav[i]}</a></td>`;
+    aaaa += /*HTML*/`<td><a href=${idNameIt} onclick="pageMain()" class="noStyleA">${delerNav[i]}</a></td>`;
   }
 
   document.getElementById("navibar").innerHTML = /*HTML*/ `

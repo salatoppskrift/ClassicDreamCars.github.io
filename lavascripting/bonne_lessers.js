@@ -26,8 +26,20 @@ let cgalvar = driveoutVideos.length - 1;
   
 function carGallery(){
   for(let i = 0; i < vehicleCollection.length; i++){
+    let a = 0; a++;
     document.getElementsByClassName("gridalicious")[0].innerHTML += /*HTML*/ `
-        <div class="dish cGal" onclick = "viewCar(vehicleCollection[${i}])">item${i}</div>
+        <div class="dish cGal" onclick = "viewCar(vehicleCollection[${i}])">
+          <div>
+            <a>
+              ${(vehicleCollection[i]).makeDishImg()}
+              <div class="invisi" id="imgtxt${a}"> <!--later, make this once text has been centered!-->
+                item${i}
+                <br>
+                ${(vehicleCollection[i]).getFullName()}
+              </div>
+            </a>
+          </div>
+        </div>
     `;
   };
     if (vehicleCollection.length % 3 == 1) document.getElementsByClassName("cGal")[vehicleCollection.length - 1].classList.add("dishMid");
@@ -57,3 +69,17 @@ function ifScrolledEnough(){
 function viewCar(car){
   car.dddd();
 };
+
+function visib(){
+  /*for(let i = 0; i < vehicleCollection.length; i++){
+    document.getElementById(`imgtxt${i}`).classList.add("imgtxt");
+  }*/
+
+  //note to self is it possible to use the add/remove as parameters?
+}
+function invisib(){
+  /*for(let i = 0; i < vehicleCollection.length; i++){
+    document.getElementById(`imgtxt${i}`).classList.remove("imgtxt");
+  }*/
+  //document.getElementById("imgtxt").classList.remove("imgtxt")
+}

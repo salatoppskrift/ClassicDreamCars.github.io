@@ -35,18 +35,27 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
     div.dishMid {grid-column: 7/span 6;} /*formerly : 2/3*/
     div.dishTwoMidOne {grid-column: 4/span 6;}
     div.dishTwoMidTwo {grid-column: 10/span 6;}
+    div.invisi{background-color: plum;}
+    div.imgtxt{background-color: aquamarine;}
 
 .gridTemp1
 {
     /*background-color: orchid;*/
     width: 94%; margin-left: 2vw;
     display: grid;
-    grid-template-columns: .11fr auto; grid-template-rows: 200px 500px;
+    grid-template-columns: .2fr auto; grid-template-rows: 200px 500px;
     margin-bottom: 20px;
 }
 /*#it1 {background-color: green;}*/
-#it2 {background-color: purple;}
-#it3 {width: 9vw; grid-column: 1/2; grid-row: 1/4; font-size: 12px;}
+#it2 {background-color: purple; text-align: left;}
+.it2 {height: 500px;}
+img.dishImg {
+    width: 290px; height: auto;
+    margin-top: calc(290px - 310px);
+    cursor: pointer;
+} img.dishImg:hover {filter: brightness(90%)}
+  img.dishImg:active {filter: brightness(80%)}
+#it3 {grid-column: 1/2; grid-row: 1/4; font-size: 12px;}
 
 
 .note {
