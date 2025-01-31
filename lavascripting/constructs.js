@@ -25,12 +25,32 @@ function dadCar(name){
 
       return CompleteAlt;
     }
+    this.getName = function(){ return this.giveXfromFile(5, "¨") }
+    /*
     this.getName = function(){
-      return this.giveXfromFile(5, "¨")
-    }
+      let namus = "";
+      for(let i = 0; i < carName.length; i++){
+        let letter = carName[i];
+        if (i < 20) continue;
+        if (letter == ".") break;
+        namus += letter;
+      }
+      return namus;
+    };
+    */
+    this.getYear = function(){ return this.giveXfromFile(0, 3); }
+    /*
     this.getYear = function(){
-      return this.giveXfromFile(0, 3);
+      let year = "";
+      for(let i = 0; i < carName.length; i++){
+        let letter = carName[i];
+        if (i < 15) continue;
+        if (i > 18) break;
+        year += letter;
+      }
+      return year;
     }
+    */
     this.getMod = function(){
       let nammus = "";
       for(let i = 0; i < (this.carName).length; i++){

@@ -32,11 +32,7 @@ function carGallery(){
           <div>
             <a>
               ${(vehicleCollection[i]).makeDishImg()}
-              <div class="invisi" id="imgtxt${a}"> <!--later, make this once text has been centered!-->
-                item${i}
-                <br>
-                ${(vehicleCollection[i]).getFullName()}
-              </div>
+              <!--<div class="invisi" id="imgtxt${a}">${(vehicleCollection[i]).getFullName()}</div>---->
             </a>
           </div>
         </div>

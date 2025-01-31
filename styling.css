@@ -50,8 +50,7 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
 #it2 {background-color: purple; text-align: left;}
 .it2 {height: 500px;}
 img.dishImg {
-    width: 290px; height: auto;
-    margin-top: calc(290px - 310px);
+    width: 290px; height: 150px;
     cursor: pointer;
 } img.dishImg:hover {filter: brightness(90%)}
   img.dishImg:active {filter: brightness(80%)}

@@ -51,7 +51,11 @@ const JagXJS = new dadCar(`1989 Jaguar XJS¨ V12.jpg`);
 const car2 = new dadCar("3008 Ooooghashaahaha");
 
 // array til å hente biler.
-const vehicleCollection = [PrwlrMull, MerceGTR, Shelby, car2, car2
+//const vehicleCollection = [PrwlrMull, MerceGTR, Shelby, car2, car2];
+const vehicleCollection = [
+    MerceBnz, BmwRS, Clenet,    JagXJS, Bmw850, DodgVipr,
+    PrwlrMull, AstMart, Shelby, Corvtte, MerceGTR, Porsche911,
+    IndFTR
 ];
 
 
