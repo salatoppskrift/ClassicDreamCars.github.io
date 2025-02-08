@@ -10,11 +10,22 @@ body
 h1, h2, h3
 { font-family: "Playfair Display"; }
 .bleeeh
-{ background-color: #9efcdd; height: 20rem; width: 1fr; position: relative; }
+{
+    background-color: #9efcdd; height: 20rem; width: 1fr;
+    background-image: url("cars\\1978 Clenet Series I Roadster¨ 105250.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 #logo {cursor: pointer;}
 
+#navibar {width: 1100px;}
+/*
+TRYING TO give a more definite size for nabivar instead of 100%, also trying to figure out how to enter a background image for bleeeh[0] and bleeeh[1] without disrupting the rest of the page. Might just need to seek a YT tutorial...
+*/
 table.navibar
-{ /*background-color: bisque; */position: absolute; width: 100%;}
+{ /*background-color: bisque; */position: absolute; width: 100%; text-align: center;}
 
 td {width: 96px; /*background-color: orchid;*/}
 
@@ -27,7 +38,9 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
 .shift {background-color: cornflowerblue; margin: auto; padding-top: 30px; width: 900px; /*formerly width was 60%, until I realised the layout adapted to the viewport width, which was not a look I was going for*/}
 .widthOV{width: 100%;}
 
-.gridalicious {background-color: purple; display: grid; gap: 15px; grid-template-columns: repeat(18, 1fr);} /*formerly, repeat(3, 1fr); remade into 18 bc 3*2*3 (needed dishMid and wanted to make a new class to arrange something for i % 3 == 2) too, if I know my father right!*/
+.gridalicious {/*background-color: purple;*/
+    display: grid; gap: 15px; grid-template-columns: repeat(18, 1fr);}
+    /*formerly, repeat(3, 1fr); remade into 18 bc 3*2*3 (needed dishMid and wanted to make a new class to arrange something for i % 3 == 2) too, if I know my father right!*/
     div.dish
     { grid-column: span 6; background-color: #facfde; height: 150px; font-size: 1rem; }
         .dish:hover{filter: brightness(75%);}
@@ -51,6 +64,7 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
 .it2 {height: 500px;}
 img.dishImg {
     width: 290px; height: 150px;
+    object-fit: cover;
     cursor: pointer;
 } img.dishImg:hover {filter: brightness(90%)}
   img.dishImg:active {filter: brightness(80%)}

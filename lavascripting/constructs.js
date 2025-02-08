@@ -20,50 +20,54 @@ function dadCar(name){
       return fullName;
     }
     this.getAlt = function(){
-      let altNam = this.getName() + this.getYear();
-      let CompleteAlt = (altNam.replaceAll(" ", "")).toLowerCase();
+      let namus = "";
+      for(let i = 0; i < 10; i++){
+        if (i < 4 ) continue;
+        let letter = this.carName[i];
+        namus += letter;
+      }
+      let altNam = namus + "_" + this.getYear();
+      let CompleteAlt = (((altNam.replaceAll(" ", "")).replaceAll("-", "")).replaceAll("¨", "")).toLowerCase();
 
       return CompleteAlt;
     }
-    this.getName = function(){ return this.giveXfromFile(5, "¨") }
-    /*
+    //this.getName = function(){ return this.giveXfromFile(5, "¨") }
     this.getName = function(){
       let namus = "";
-      for(let i = 0; i < carName.length; i++){
-        let letter = carName[i];
-        if (i < 20) continue;
+      for(let i = 0; i < this.carName.length; i++){
+        let letter = this.carName[i];
+        if (i < 4 ) continue;
+        if (letter == "¨") break;
         if (letter == ".") break;
         namus += letter;
       }
       return namus;
     };
-    */
-    this.getYear = function(){ return this.giveXfromFile(0, 3); }
-    /*
+    //this.getYear = function(){ return this.giveXfromFile(0, 3); }
+    
     this.getYear = function(){
       let year = "";
-      for(let i = 0; i < carName.length; i++){
-        let letter = carName[i];
-        if (i < 15) continue;
-        if (i > 18) break;
+      for(let i = 0; i < this.carName.length; i++){
+        let letter = this.carName[i];
+        if (i > 3) break;
         year += letter;
       }
       return year;
     }
-    */
+    
     this.getMod = function(){
-      let nammus = "";
+      let modl = "";
       for(let i = 0; i < (this.carName).length; i++){
         let letter = (this.carName)[i];
         if (letter == "¨"){
           for(let ii = i + 2; ii < (this.carName.length); ii++){
             let newLetter = (this.carName)[ii];
             if((this.carName)[ii] == ".") break;
-            nammus += newLetter;
+            modl += newLetter;
           };
         };
       }
-      return nammus;
+      return modl;
     }
     this.giveXfromFile = function(cond1, cond2){
       // okay wait. maybe this is solvable by just changing the stopper? the year can be created by its own for loop, same with the name, same with the model/extra...
@@ -90,7 +94,9 @@ function dadCar(name){
       return namus;
     }
     this.makeDishImg = function(){
-      return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`;
+      return `<img class="dishImg" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
+
+      //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`;
     }
     this.makeImgWclass_it2 = function(){
       let imgPart = `<img class="it2" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`;

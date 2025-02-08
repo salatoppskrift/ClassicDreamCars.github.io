@@ -66,16 +66,18 @@ function viewCar(car){
   car.dddd();
 };
 
+/*
 function visib(){
-  /*for(let i = 0; i < vehicleCollection.length; i++){
+  for(let i = 0; i < vehicleCollection.length; i++){
     document.getElementById(`imgtxt${i}`).classList.add("imgtxt");
-  }*/
+  }
 
   //note to self is it possible to use the add/remove as parameters?
 }
 function invisib(){
   /*for(let i = 0; i < vehicleCollection.length; i++){
     document.getElementById(`imgtxt${i}`).classList.remove("imgtxt");
-  }*/
+  }
   //document.getElementById("imgtxt").classList.remove("imgtxt")
 }
+*/
