@@ -31,7 +31,7 @@ function carGallery(){
         <div class="dish cGal" onclick = "viewCar(vehicleCollection[${i}])">
           <div>
             <a>
-              ${(vehicleCollection[i]).makeDishImg()}
+              ${(vehicleCollection[i]).makeDishImg("cars")}
               <!--<div class="invisi" id="imgtxt${a}">${(vehicleCollection[i]).getFullName()}</div>---->
             </a>
           </div>
@@ -42,11 +42,15 @@ function carGallery(){
     else if (vehicleCollection.length % 3 == 2) {
       document.getElementsByClassName("cGal")[vehicleCollection.length - 1].classList.add("dishTwoMidTwo");
       document.getElementsByClassName("cGal")[vehicleCollection.length - 2].classList.add("dishTwoMidOne");
-    }
+    };
 
   for(let i = 0; i < driveoutVideos.length; i++){
     document.getElementsByClassName("gridalicious")[1].innerHTML += /*HTML*/ `
-        <div class="dish vGal" onclick = "viewCar(driveoutVideos[${i}])">item${i}</div>
+        <div class="dish vGal" onclick = "viewCar(driveoutVideos[${i}])">
+          <div>
+            ${(driveoutVideos[i]).makeDishImg("movPreviews")}
+          </div>
+        </div>
     `;
   };
     if (driveoutVideos.length % 3 == 1) document.getElementsByClassName("vGal")[driveoutVideos.length - 1].classList.add("dishMid");

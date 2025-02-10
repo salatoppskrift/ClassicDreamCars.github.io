@@ -1,12 +1,12 @@
 // se constucts.js for konstruktor til tittlInnhold!
 
-const om = new tittlInnhold("Om", xxx);
+const om = new tittlInnhold("Om", txtOm);
 const intet = new tittlInnhold("nei", "NEI");
 const bilr = new tittlInnhold("Biler m.m.", "");
 const filmr = new tittlInnhold("Filmer", "");
-const ytbtip = new tittlInnhold("YouTube Tips", xxx);
-const drives = new tittlInnhold("Kjøreturer m.m.", xxx);
-const cntct = new tittlInnhold("Kontakt", xxx);
+const ytbtip = new tittlInnhold("YouTube Tips", txtYT);
+const drives = new tittlInnhold("Kjøreturer m.m.", txtKjrTurer);
+const cntct = new tittlInnhold("Kontakt", txtKnkt);
 
 // lagde en array for lettere å hente titler og innhold til de forskjellige delene av hovedsiden.
 const deler = [om, bilr, intet, filmr, intet, ytbtip, drives, cntct];
@@ -48,8 +48,6 @@ const BmwRS = new dadCar(`1978 BMW R100 RS.JPG`);
 const JagXJS = new dadCar(`1989 Jaguar XJS¨ V12.jpg`);
 */
 
-const car2 = new dadCar("3008 Ooooghashaahaha");
-
 // array til å hente biler.
 //const vehicleCollection = [PrwlrMull, MerceGTR, Shelby, car2, car2];
 const vehicleCollection = [
@@ -60,10 +58,37 @@ const vehicleCollection = [
 
 
 // bruker constructor fra dadCar til å lage videosider
-const vid1 = new dadCar("Driveout 1");
-const vid2 = new dadCar("Driveout 2");
-const vid3 = new dadCar("Driveout 3");
-const vid4 = new dadCar("Driveout 4");
+const vid1 = new dadCar(`2019 vestfold driveout mTekst.jpg`,
+    `2019 Day 2 Vestfold CLASSIC DRIVE OUT.mp4`);
+const vid2 = new dadCar(`2019 Jarlsø driveout mTekst.png`,
+    `2019 Jarlsø Drive Out.mp4`);
+const vid3 = new dadCar(`2019 Noen av Bilene mTekst.png`,
+    ``, // FILENAME MISSING
+);
+
+const vid4 = new dadCar(`2021 Shelby gt500 mTekst.png`,
+    `2021 Shelby GT500 Mustang.mov`
+);
+const vid5 = new dadCar(`2022 2016 corvette mTekst.png`,
+    `https://www.youtube.com/watch?v=CE4ZdZgBWC8`
+);
+const vid6 = new dadCar(`2023 1ukenggarage mTekst.png`,
+    `2023 1-UK Garage.mov`);
+
+const vid7 = new dadCar(`2023 2usagarage mTekst.png`,
+    `2023 2-US Garage.mov`
+);
+const vid8 = new dadCar(`2023 3degarage mTekst.png`,
+    `2023 3-DE Garage.mov`
+);
+const vid9 = new dadCar(`2023 aston martin db7 mTekst.png`,
+    `2023 Aston M db7 - HD.mov`
+);
+
 
 // array, henter videoer
-const driveoutVideos = [vid1, vid2, vid3, vid4];
+const driveoutVideos = [
+    vid1, vid2, vid3,
+    vid4, vid5, vid6,
+    vid7, vid8, vid9
+];

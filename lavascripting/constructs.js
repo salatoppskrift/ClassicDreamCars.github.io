@@ -6,14 +6,15 @@ function tittlInnhold(tittel, innhold){
         <h2>${tittel}</h2>
       </div>
       <div>
-        <p class="pTxt">${innhold}</p>
+        <div class="pTxt">${innhold}</div>
       </div>
     `;
     };
 };
 
-function dadCar(name){
-    this.carName = name;
+function dadCar(fileStill, fileVid){
+    this.carName = fileStill;
+    this.driveFilm = fileVid;
     this.getFullName = function(){
       let fullName = this.getYear() + " " + this.getName() + " " + this.getMod();
       
@@ -93,8 +94,8 @@ function dadCar(name){
       }
       return namus;
     }
-    this.makeDishImg = function(){
-      return `<img class="dishImg" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
+    this.makeDishImg = function(prm){
+      return `<img class="dishImg" src="${prm}\\${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
 
       //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`;
     }
@@ -105,6 +106,7 @@ function dadCar(name){
     }
     this.dddd = function(){
       document.getElementsByClassName("bleeeh")[0].style.height = "300px";
+      //document.getElementsByClassName("bleeeh")[0].style = `background-image: xx;`; How to remove background while looking at the individual cars...
       let entry = "";
       for(let i = 0; i < 4; i++)
         entry += `<div class = "panhght">panel</div>`;
