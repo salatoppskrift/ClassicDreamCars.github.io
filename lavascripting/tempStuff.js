@@ -95,6 +95,8 @@ NOTES::
     - make loop for the gallery items (both); generating ids and hrefs to them, so visitors can note the change in the URL and can easily link each other what car they're admiring in particular.
     - implement the images
     - style the images in the galleries, please!
+
+diary: at least we still have paris! Re-size the video files so they're all less than 100 mb, that's what's making github so crybaby-like.
 */
 
 /*RECIPES FROM w3school LOOK AT THESE AGAIN PLS
