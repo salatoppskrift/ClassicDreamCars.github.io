@@ -37,7 +37,11 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
 .pTxt {font-family: "Quicksand"; font-size: 1rem; padding: 30px; padding-left: 90px; padding-right: 90px; /*background-color: goldenrod;*/ text-align: left; /*padding-bottom: 100px;*/}
     .pTxt ul {padding: 30px; padding-left: 40px;}
 
-.shift {/*background-color: cornflowerblue; WORKING COLORS*/ margin: auto; padding-top: 30px; width: 900px; /*formerly width was 60%, until I realised the layout adapted to the viewport width, which was not a look I was going for*/}
+.shift {
+    /*background-color: cornflowerblue; WORKING COLORS*/
+    margin: auto; padding-top: 30px; width: 900px; /*formerly width was 60%, until I realised the layout adapted to the viewport width, which was not a look I was going for*/
+    padding-bottom: 50px;
+}
 .widthOV{width: 100%;}
 
 .gridalicious {/*background-color: purple;*/
