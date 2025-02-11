@@ -3,7 +3,7 @@
     font-family: "Quicksand", serif;
 }
 body
-{ background-color: #e5a0a0;
+{ /*background-color: #e5a0a0; WORKING COLOR*/
     font-size: 2em;
     align-items: center; text-align: center; }
 
@@ -11,7 +11,7 @@ h1, h2, h3
 { font-family: "Playfair Display"; }
 .bleeeh
 {
-    background-color: #9efcdd; height: 20rem; width: 1fr;
+    background-color:/* #9efcdd WORKING COLOR*/ #797474; height: 20rem; width: 1fr;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,14 +37,14 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
 .pTxt {font-family: "Quicksand"; font-size: 1rem; padding: 30px; padding-left: 90px; padding-right: 90px; /*background-color: goldenrod;*/ text-align: left; /*padding-bottom: 100px;*/}
     .pTxt ul {padding: 30px; padding-left: 40px;}
 
-.shift {background-color: cornflowerblue; margin: auto; padding-top: 30px; width: 900px; /*formerly width was 60%, until I realised the layout adapted to the viewport width, which was not a look I was going for*/}
+.shift {/*background-color: cornflowerblue; WORKING COLORS*/ margin: auto; padding-top: 30px; width: 900px; /*formerly width was 60%, until I realised the layout adapted to the viewport width, which was not a look I was going for*/}
 .widthOV{width: 100%;}
 
 .gridalicious {/*background-color: purple;*/
     display: grid; gap: 15px; grid-template-columns: repeat(18, 1fr);}
     /*formerly, repeat(3, 1fr); remade into 18 bc 3*2*3 (needed dishMid and wanted to make a new class to arrange something for i % 3 == 2) too, if I know my father right!*/
     div.dish
-    { grid-column: span 6; background-color: #facfde; height: 150px; font-size: 1rem; }
+    { grid-column: span 6; /*background-color: #facfde; WORKING COLORS*/ height: 150px; font-size: 1rem; }
         .dish:hover{filter: brightness(75%);}
         .dish:active{filter: brightness(75%);}
     div.dishMid {grid-column: 7/span 6;} /*formerly : 2/3*/
@@ -62,7 +62,7 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
     margin-bottom: 20px;
 }
 /*#it1 {background-color: green;}*/
-#it2 {background-color: purple; text-align: left;}
+#it2 {/*background-color: purple; WORKING COLOR*/ text-align: left;}
 .it2 {height: 500px;}
 img.dishImg {
     width: 290px; height: 150px;
@@ -89,6 +89,6 @@ img.dishImg {
 .show {opacity: 1; bottom: 30px;}
 
 #grTmp1pan {margin-left: 0.4vw; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;}
-#grTmp1pan > div {height: 3.9vw; background-color: bisque;}
+#grTmp1pan > div {height: 3.9vw; /*background-color: bisque; WORKING COLORS*/}
 .panhght:hover {filter: brightness(80%);}
 .panhght:active {filter: brightness(70%);}
