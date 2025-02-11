@@ -105,11 +105,18 @@ function dadCar(fileStill, fileVid){
       `;
     }
     this.makeImgGreyGallery = function(arrayName, folderName){
-      let entry = "";
+      let sourceVal = folderName;
+      /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
+      else sourceVal = folderName;*/
+    let entry = "";
       for(let i = 0; i < arrayName.length; i++){
+        /*let p1 = arrayName;
+        let p2 = sourceVal;
+        let p3 = p1[i];
+        onclick = "viewCar(${p3}, ${p2}, ${p1})";*/
         entry += /*HTML*/ `
-          <div class = "panhght">
-            <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
+          <div onclick = "" class = "panhght">
+            <img class = "smallGrey" src="${sourceVal}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
           </div>
           `;
         };

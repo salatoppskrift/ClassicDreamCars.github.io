@@ -55,6 +55,10 @@ function carGallery(){
     `;
   };
     if (driveoutVideos.length % 3 == 1) document.getElementsByClassName("vGal")[driveoutVideos.length - 1].classList.add("dishMid");
+    else if (driveoutVideos.length % 3 == 2) {
+      document.getElementsByClassName("vGal")[driveoutVideos.length - 1].classList.add("dishTwoMidTwo");
+      document.getElementsByClassName("vGal")[driveoutVideos.length - 2].classList.add("dishTwoMidOne");
+    };
 };
 
 function ifScrolledEnough(){
@@ -66,7 +70,7 @@ function ifScrolledEnough(){
   }
   window.addEventListener("scroll", scrollToNote);  
 };
-
+// onclick = driveoutVideos[i].dddd('movPreviews', driveoutVideos)
 function viewCar(car, folder, carOrDriveCollection){
   car.dddd(folder, carOrDriveCollection);
 };
