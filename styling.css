@@ -17,8 +17,8 @@ h1, h2, h3
     background-repeat: no-repeat;
     background-size:cover;
 }
-.bleeeh:nth-child(1){ background-image: url("cars\\1978 Clenet Series I Roadster¨ 105250.jpg"); }
-.bleeeh:nth-child(2){ background-image: url("cars\\1989 Jaguar XJS¨ V12.jpg"); }
+.bleeeh:nth-child(1){ background-image: url("cars/1978 Clenet Series I Roadster¨ 105250.jpg"); }
+.bleeeh:nth-child(2){ background-image: url("cars/1989 Jaguar XJS¨ V12.jpg"); }
 #logo {cursor: pointer;}
 
 #navibar {width: 1100px;}
@@ -58,11 +58,12 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
     /*background-color: orchid;*/
     width: 94%; margin-left: 2vw;
     display: grid;
-    grid-template-columns: .2fr auto; grid-template-rows: 200px 500px;
+    grid-template-columns: 100px auto; grid-template-rows: 200px 500px;
     margin-bottom: 20px;
+    height: auto;
 }
 /*#it1 {background-color: green;}*/
-#it2 {/*background-color: purple; WORKING COLOR*/ text-align: left;}
+#it2 {/*background-color: purple; WORKING COLOR*/ text-align: left;  margin-left: 30px;}
 .it2 {height: 500px;}
 img.dishImg {
     width: 290px; height: 150px;
@@ -88,7 +89,15 @@ img.dishImg {
 .hide {opacity: 0; bottom: -10%;}
 .show {opacity: 1; bottom: 30px;}
 
-#grTmp1pan {margin-left: 0.4vw; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;}
-#grTmp1pan > div {height: 3.9vw; /*background-color: bisque; WORKING COLORS*/}
-.panhght:hover {filter: brightness(80%);}
-.panhght:active {filter: brightness(70%);}
+#grTmp1pan {margin-left: 20px; display: grid; grid-template-columns: auto auto; gap: 8px;}
+.panhght{
+    background-color: bisque;
+    width: 45px; height: 45px;
+}   .panhght:hover {filter: brightness(80%);}
+    .panhght:active {filter: brightness(70%);}
+    .smallGrey {
+        width: 45px; height: 45px;
+        filter: saturate(10%) brightness(90%);
+        object-fit: cover;
+        cursor: pointer;
+    }

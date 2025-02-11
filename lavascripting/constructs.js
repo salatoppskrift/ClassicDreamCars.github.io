@@ -94,22 +94,32 @@ function dadCar(fileStill, fileVid){
       }
       return namus;
     }
-    this.makeDishImg = function(prm){
-      return `<img class="dishImg" src="${prm}\\${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
+    this.makeDishImg = function(folderName){
+      return `<img class="dishImg" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
 
-      //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`;
+      //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
     }
-    this.makeImgWclass_it2 = function(){
-      let imgPart = `<img class="it2" src="cars\\${this.carName}" alt="${this.getAlt()}"></img>`;
-      
-      return imgPart;
+    this.makeImgWclass_it2 = function(folderName){
+      return `
+        <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
+      `;
     }
-    this.dddd = function(){
-      document.getElementsByClassName("bleeeh")[0].style.height = "300px";
-      //document.getElementsByClassName("bleeeh")[0].style = `background-image: xx;`; How to remove background while looking at the individual cars...
+    this.makeImgGreyGallery = function(arrayName, folderName){
       let entry = "";
-      for(let i = 0; i < 4; i++)
-        entry += `<div class = "panhght">panel</div>`;
+      for(let i = 0; i < arrayName.length; i++){
+        entry += /*HTML*/ `
+          <div class = "panhght">
+            <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
+          </div>
+          `;
+        };
+      return entry;
+    };
+    this.dddd = function(prm, prm2){
+      document.getElementsByClassName("bleeeh")[0].style.height = "300px";
+      document.getElementsByClassName("bleeeh")[0].style = `background-image: none; background-color: white;`;
+      //document.getElementsByClassName("bleeeh")[0].style = `background-image: xx;`; How to remove background while looking at the individual cars...
+      
       document.getElementById("page").innerHTML = /*HTML*/`
       <div class = "gridTemp1" id="${this.getAlt()}">
         <div id = "it1" class="pTxt" style="padding-left: 45px;">
@@ -118,18 +128,24 @@ function dadCar(fileStill, fileVid){
           </span>
             ${this.getName()}
           <br>
-            .... file name is ${this.carName.length} units long.
+            .... file name is ${this.carName.length} units long, the actual name is
+            <span style="color: goldenrod;">
+              ${this.carName}</span>.
           <br>
           The car is from ${this.getYear()}; an okay year!<br><br>
-          The full name of this car is: <span style="color: bisque">${this.getFullName()}</span><br>
+          The full name of this car is: <span style="color: brown">${this.getFullName()}</span><br>
           Meanwhile, the extra bit at the end should be: <span style="color: darkcyan">
             ${this.getMod()}
           </span><br>
           ID: ${this.getAlt()}
         </div>
-        <div id = "it2">${this.makeImgWclass_it2()}</div>
-        <div id = "it3">
-          <div id = "grTmp1pan">${entry}</div>
+
+        <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
+          ${this.makeImgWclass_it2(prm)}
+        </div>
+
+        <div id = "it3"> <!---the grey gallery beside the main image--->
+          <div id = "grTmp1pan">${this.makeImgGreyGallery(prm2, prm)}</div>
         </div>
       </div>
       `;

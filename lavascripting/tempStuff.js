@@ -246,7 +246,7 @@ document.getElementById("sect1").style.hover
 
 ////// THE DUMP //////
 
-const MrgnPlus = new dadCar("Morgan Plus", 8, 1994, `<img src="cars\\1994 morgan plus 8.jpg" alt="Morgan">`);
+const MrgnPlus = new dadCar("Morgan Plus", 8, 1994, `<img src="cars/1994 morgan plus 8.jpg" alt="Morgan">`);
 
  */
 

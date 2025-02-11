@@ -4,13 +4,13 @@ topView()
 pageMain();
 foot();
 
-//document.getElementsByClassName("bleeeh")[0].style.backgroundImage = `url("cars\\1978 Clenet Series I Roadster¨ 105250.jpg")`;
-//document.getElementsByClassName("bleeeh")[1].style.backgroundImage = `url("cars\\1989 Jaguar XJS¨ V12.jpg")`;
+//document.getElementsByClassName("bleeeh")[0].style.backgroundImage = `url("cars/1978 Clenet Series I Roadster¨ 105250.jpg")`;
+//document.getElementsByClassName("bleeeh")[1].style.backgroundImage = `url("cars/1989 Jaguar XJS¨ V12.jpg")`;
 
   //Dear diary, today (21-22.January) I fixed the DRY thing I had going!
 
 //const titleItems = ["Om", "Biler", "Filmer", "Kjøreturer", "YouTube Tips", "Kontakt"];
-//<img src="cars\\1978 Clenet Series I Roadster¨ 105250.jpg" alt="clenet" style="width: 100%;">
+//<img src="cars/1978 Clenet Series I Roadster¨ 105250.jpg" alt="clenet" style="width: 100%;">
 
 function topView(){
     document.getElementsByClassName("bleeeh")[0].innerHTML = /*HTML*/`
@@ -66,6 +66,7 @@ function pageMain(){
       <div class="bleeeh"></div>
       <div class="shift" id = "Kontakt"></div>
     `;
+    document.getElementsByClassName("bleeeh")[0].style = `background-image: url("cars/1978 Clenet Series I Roadster¨ 105250.jpg");`;
     mainForLoops();
     carGallery();
     ifScrolledEnough();

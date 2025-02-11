@@ -20,15 +20,16 @@ function mainForLoops()
       if (i == 1) size = "48rem";
       if (i == 2) size = "28rem";
       document.getElementsByClassName("bleeeh")[i].style.height = size;
+      // this might be where you can change the damned thing...
     };
 };
-let cgalvar = driveoutVideos.length - 1;
+//let cgalvar = driveoutVideos.length - 1;
   
 function carGallery(){
   for(let i = 0; i < vehicleCollection.length; i++){
     let a = 0; a++;
     document.getElementsByClassName("gridalicious")[0].innerHTML += /*HTML*/ `
-        <div class="dish cGal" onclick = "viewCar(vehicleCollection[${i}])">
+        <div class="dish cGal" onclick = "viewCar((vehicleCollection[${i}]), 'cars', vehicleCollection)">
           <div>
             <a>
               ${(vehicleCollection[i]).makeDishImg("cars")}
@@ -46,7 +47,7 @@ function carGallery(){
 
   for(let i = 0; i < driveoutVideos.length; i++){
     document.getElementsByClassName("gridalicious")[1].innerHTML += /*HTML*/ `
-        <div class="dish vGal" onclick = "viewCar(driveoutVideos[${i}])">
+        <div class="dish vGal" onclick = "viewCar((driveoutVideos[${i}]), 'movPreviews', driveoutVideos)">
           <div>
             ${(driveoutVideos[i]).makeDishImg("movPreviews")}
           </div>
@@ -66,8 +67,8 @@ function ifScrolledEnough(){
   window.addEventListener("scroll", scrollToNote);  
 };
 
-function viewCar(car){
-  car.dddd();
+function viewCar(car, folder, carOrDriveCollection){
+  car.dddd(folder, carOrDriveCollection);
 };
 
 /*
