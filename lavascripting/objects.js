@@ -59,7 +59,7 @@ const vehicleCollection = [
 
 // bruker constructor fra dadCar til å lage videosider
 const vid1 = new dadCar(`2019 vestfold driveout mTekst.jpg`,
-    `2019 Day 2 Vestfold CLASSIC DRIVE OUT.mp4`);
+    `2019 Day 2 Vestfold Classic Drive Out.mp4`);
 const vid2 = new dadCar(`2019 Jarlsø driveout mTekst.png`,
     `2019 Jarlsø Drive Out.mp4`);
 const vid3 = new dadCar(`2019 Noen av Bilene mTekst.png`,

@@ -6,8 +6,6 @@ const dreamcarRules = [
 ];
 const YTreccs = ["Jay Leno's Garage*", "Doug Demuro*", "Seen Through Glass*", "Schmee150*", "Top Gear", "Car TV", "Car WOW", "Daily Driven Exotics", "Harry's Garage*", "Vehicle Virgins", "Petrolicious*", "Dreamcars daily", "Classic Cars", "Series No Cuts*", "Car News TV", "The Drive*", "Curves Magazin*", "Amazing Scenic Drives*", "Roadtrip Through the Lens*"];
 
-let tempVar = "u can delete me later wo regret!!";
-
 function usersLists(listparam){
   let xx = "";
   for(let i = 0; i < listparam.length; i++){
