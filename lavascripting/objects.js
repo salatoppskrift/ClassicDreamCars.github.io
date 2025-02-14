@@ -67,16 +67,16 @@ const vid3 = new dadCar(`2019 Noen av Bilene mTekst.png`,
 );
 
 const vid4 = new dadCar(`2021 Shelby gt500 mTekst.png`,
-    `2021 Shelby GT500 Mustang.mov`
+    `2021 Shelby Gt500 Mustang.mp4`
 );
 const vid5 = new dadCar(`2022 2016 corvette mTekst.png`,
     `https://www.youtube.com/watch?v=CE4ZdZgBWC8`
 );
 const vid6 = new dadCar(`2023 1ukenggarage mTekst.png`,
-    `2023 1-UK Garage.mov`);
+    `2023 1-Uk Garage.mp4`);
 
 const vid7 = new dadCar(`2023 2usagarage mTekst.png`,
-    `2023 2-US Garage.mov`
+    `2023 2-Us Garage.mp4`
 );
 const vid8 = new dadCar(`2023 3degarage mTekst.png`,
     `2023 3-DE Garage.mov`
