@@ -20,6 +20,24 @@ function dadCar(fileStill, fileVid){
       
       return fullName;
     }
+    this.getEnd = function(prm){ //returns the string filename's file type as a string;
+      // PLEASE NOTE!!
+      // prm should be this.carName or this.driveFilm!!!
+      let punctuation = (prm).indexOf(".");
+      let ending = "";
+      for(let i = punctuation; i < (prm).length; i++){
+        let letter = this.carName[i];
+        ending += letter;
+      }
+    }
+    this.getPureYTlink = function(){
+      let ytVidId = ""
+      for(let i = 0; i < this.driveFilm.indexOf("."); i++){
+        let letter = this.driveFilm[i];
+        ytVidId += letter;
+      }
+      return ytVidId;
+    }
     this.getAlt = function(){
       let namus = "";
       for(let i = 0; i < 10; i++){
@@ -33,30 +51,27 @@ function dadCar(fileStill, fileVid){
       return CompleteAlt;
     }
     //this.getName = function(){ return this.giveXfromFile(5, "¨") }
-    this.getName = function(){
+    this.getName = function(){ //removes the year from the name and stops when there's a ¨ or a .
       let namus = "";
-      for(let i = 0; i < this.carName.length; i++){
+      for(let i = this.carName.indexOf(" "); i < this.carName.indexOf("."); i++){
+        if (i == this.carName.indexOf("¨")) break;
         let letter = this.carName[i];
-        if (i < 4 ) continue;
-        if (letter == "¨") break;
-        if (letter == ".") break;
         namus += letter;
       }
       return namus;
     };
     //this.getYear = function(){ return this.giveXfromFile(0, 3); }
     
-    this.getYear = function(){
+    this.getYear = function(){ // only returns the year from the name
       let year = "";
-      for(let i = 0; i < this.carName.length; i++){
+      for(let i = 0; i < this.carName.indexOf(" "); i++){
         let letter = this.carName[i];
-        if (i > 3) break;
         year += letter;
       }
       return year;
     }
     
-    this.getMod = function(){
+    this.getMod = function(){ //clunky but works, this delivers the information past the ¨ character if the filename has one.
       let modl = "";
       for(let i = 0; i < (this.carName).length; i++){
         let letter = (this.carName)[i];
@@ -71,6 +86,7 @@ function dadCar(fileStill, fileVid){
       return modl;
     }
     this.giveXfromFile = function(cond1, cond2){
+      // WHITE WHALE: trying to cobble getMod, getName, and getYear into ONE FUNCTION.
       // okay wait. maybe this is solvable by just changing the stopper? the year can be created by its own for loop, same with the name, same with the model/extra...
       // year: start [0] end when reaches [3] but somehow turn this into a string... test it out on w3school.
           // I could set the parameter in getYear to 4 but that's not a solution, we'll just get the same issue as with 4 whenever we get a car with a 4 in it!!
@@ -103,6 +119,32 @@ function dadCar(fileStill, fileVid){
     // formerly "this.makeImgWclass_it2"
     this.createIt2 = function(folderName){
       // gives the INDIVIDUAL image for the object given to it
+      /*
+      let x = "";
+      if (this.getEnd(this.carName) == ".jpeg" || ".jpg") x = `
+      <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
+      `;
+      else if (this.getEnd(this.driveFilm) == ".mp4") x = `
+      <video class="it2" controls>
+        <source src="movies/${this.driveFilm}" type="video/mp4">
+        <source src="movies/${this.driveFilm}}" type="video/ogg">
+        Your browser does not support the video tag.
+	    </video>
+      `;
+      else if (this.getEnd(this.driveFilm) == ".yt") x = `
+      <iframe class="it2"
+		    src="https://www.youtube.com/embed/${this.getPureYTlink()}">
+	    </iframe>
+      `;
+
+      return `
+      <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
+        ${x}
+      </div>
+      `;
+      */
+
+
       return /*HMTL*/`
       <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
         <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
