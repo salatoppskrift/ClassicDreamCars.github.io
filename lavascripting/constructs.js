@@ -95,41 +95,83 @@ function dadCar(fileStill, fileVid){
       return namus;
     }
     this.makeDishImg = function(folderName){
+      // gives the image settings for the galleries on the main page
       return `<img class="dishImg" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
 
       //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
     }
-    this.makeImgWclass_it2 = function(folderName){
-      return `
+    // formerly "this.makeImgWclass_it2"
+    this.createIt2 = function(folderName){
+      // gives the INDIVIDUAL image for the object given to it
+      return /*HMTL*/`
+      <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
         <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
+      </div>
       `;
     }
-    this.makeImgGreyGallery = function(arrayName, folderName){
+    this.gråGalleriet = function(arrayName, folderName){
       let sourceVal = folderName;
       /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
       else sourceVal = folderName;*/
-    let entry = "";
-      for(let i = 0; i < arrayName.length; i++){
-        /*let p1 = arrayName;
-        let p2 = sourceVal;
-        let p3 = p1[i];
-        onclick = "viewCar(${p3}, ${p2}, ${p1})";*/
-        entry += /*HTML*/ `
-          <div onclick = "" class = "panhght">
-            <img class = "smallGrey" src="${sourceVal}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
-          </div>
-          `;
-        };
-      return entry;
+      let entry = "";
+        for(let i = 0; i < arrayName.length; i++){
+          /*let p1 = arrayName;
+          let p2 = sourceVal;
+          let p3 = p1[i];
+          onclick = "viewCar(${p3}, ${p2}, ${p1})";
+          onclick = "viewCar('${}')"*/
+          entry += /*HTML*/ `
+            <div class = "panhght" onclick = "">
+              <img class = "smallGrey" src="${sourceVal}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
+            </div>
+            `;
+          };
+        return entry;
     };
-    this.dddd = function(prm, prm2){
-      document.getElementsByClassName("bleeeh")[0].style.height = "300px";
-      document.getElementsByClassName("bleeeh")[0].style = `background-image: none; background-color: white;`;
+
+    this.dddd = function(prm){
+      stylebleeeh0LikeSo();
       //document.getElementsByClassName("bleeeh")[0].style = `background-image: xx;`; How to remove background while looking at the individual cars...
       
       document.getElementById("page").innerHTML = /*HTML*/`
       <div class = "gridTemp1" id="${this.getAlt()}">
+        ${this.createIt1()}
+
+        ${this.createIt2(prm)}
+
+        <!---GRÅGALLERIET: se bonne_lessers for viewCar()--->
+        <div id = "it3"></div>
+      </div>
+      `;
+    };
+    this.eeee = function(){
+      stylebleeeh0LikeSo();
+
+      document.getElementById("page").innerHTML = /*HTML*/`
+      <div class = "gridTemp1" id="${this.getAlt()}">
         <div id = "it1" class="pTxt" style="padding-left: 45px;">
+          Dette er en side produsert med en funksjon ved navn "eeee"!
+        </div>
+
+        <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
+          <!---${this.makeImgWclass_it2(prm)}--->
+        </div>
+
+        <div id = "it3"> <!---the grey gallery beside the main image--->
+          <div id = "grTmp1pan"></div> <!--NOTE BIG NOTE HERE THIS SHOULD BE ITS OWN FUNCTION SHOULDN'T IT??---->
+        </div>
+
+      </div>
+      `;
+    };
+    // functions within functions for dddd and eeee
+    stylebleeeh0LikeSo = function(){
+      document.getElementsByClassName("bleeeh")[0].style.height = "300px";
+      document.getElementsByClassName("bleeeh")[0].style = `background-image: none; background-color: white;`;
+    }
+    this.createIt1 = function(){
+      return /*HTML*/`
+      <div id = "it1" class="pTxt" style="padding-left: 45px;">
           <span style="color: purple">
             File name when the tags, the year, and its addition is removed:
           </span>
@@ -145,15 +187,6 @@ function dadCar(fileStill, fileVid){
             ${this.getMod()}
           </span><br>
           ID: ${this.getAlt()}
-        </div>
-
-        <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
-          ${this.makeImgWclass_it2(prm)}
-        </div>
-
-        <div id = "it3"> <!---the grey gallery beside the main image--->
-          <div id = "grTmp1pan">${this.makeImgGreyGallery(prm2, prm)}</div>
-        </div>
       </div>
       `;
     };

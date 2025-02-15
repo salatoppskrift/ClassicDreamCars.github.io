@@ -73,6 +73,12 @@ function ifScrolledEnough(){
 // onclick = driveoutVideos[i].dddd('movPreviews', driveoutVideos)
 function viewCar(car, folder, carOrDriveCollection){
   car.dddd(folder, carOrDriveCollection);
+
+  document.getElementById("it3").innerHTML = `
+    <div id = "grTmp1pan">
+      ${car.gråGalleriet(carOrDriveCollection, folder)}
+    </div>
+  `;
 };
 
 /*

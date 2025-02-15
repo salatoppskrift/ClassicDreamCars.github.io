@@ -79,10 +79,10 @@ const vid7 = new dadCar(`2023 2usagarage mTekst.png`,
     `2023 2-Us Garage.mp4`
 );
 const vid8 = new dadCar(`2023 3degarage mTekst.png`,
-    `2023 3-DE Garage.mov`
+    `2023 3-De Garage.mp4`
 );
 const vid9 = new dadCar(`2023 aston martin db7 mTekst.png`,
-    `2023 Aston M db7 - HD.mov`
+    `2023 Aston M Db7 - Hd.mp4`
 );
 
 

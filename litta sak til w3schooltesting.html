@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .purple{color: darkviolet;}
+  .punic{margin-top: 10px;}
+  #punic{margin-top: 10px;}
+  .alicebutt{padding: 5px; background-color: aliceblue; border-radius: 10%;}
+    .alicebutt:hover{filter: brightness(90%)};
+    .alicebutt:active{filter: brightness(140%)};
+</style>
+
+<body>
+
+<h2 style="color: plum;">Hello World!</h2>
+<p>This is a paragraph.</p>
+
+<div id="pagus">Her skal vi endres!!</div>
+
+</body>
+
+<script>
+
+makeButtons();
+
+function makeButtons(){
+  let entry = "";
+  const colours = ["darkviolet", "blue", "MediumVioletRed", "chocolate", "dodgerblue"];
+  const lttrs = ['gg', 'ee', 'ff', 'aa', 'zz'];
+  const numbs = ["+", "-", ";", "_", "@"];
+
+  for(let i = 0; i < 5; i++){
+    entry+= `
+    <button style="color: ${colours[i]}" onclick="changePunic('${lttrs[i]}', '${numbs[i]}')">
+    	Klikk meg!
+    </button>
+  `;
+}
+document.getElementById("pagus").innerHTML = entry + `<div id="punic">dd</div>`;
+}
+
+function changePunic(prm, prm2){
+  document.getElementById("punic").innerHTML = prm + prm2 + prm + ` <button class="alicebutt" onclick="makeButtons()">chaosbutton</button>`;
+}
+
+</script>
+
+</html>

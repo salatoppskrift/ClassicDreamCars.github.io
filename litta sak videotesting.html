@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .vidStyle{
+  width: 600px; height: 300px;
+  background-color: black;
+  }
+  img.vidStyle{object-fit: cover;}
+</style>
+
+<body>
+
+<div id="putVidsHere">eee</div>
+
+</body>
+
+<script>
+function video(typpe, filnavn, navn){
+  this.typing = typpe;
+  this.filename = filnavn;
+  this.name = navn;
+}
+
+/*
+const bohem = new video("video/webm", "https://www.youtube.com/embed/tgbNymZ7vqY", "bohemian muppet");
+const bear = new video("video/webm", "movie.mp4", "bear in river");
+const picture = new video("image/jpg", "pic_trulli.jpg");
+*/
+
+const bohem = new video("yt", "tgbNymZ7vqY", "bohemian muppet");
+const bear = new video("video/webm", "movie.mp4", "bear in river");
+const picture = new video("image/jpg", "pic_trulli.jpg");
+const coldsong = new video("yt", "VnHnOHZmWDI", "cold song, Nanette Schriba");
+
+const videoCol = [bohem, bear, picture, coldsong];
+
+function addVids(){
+  let x = "";
+  for(let i = 0; i < videoCol.length; i++){
+    if (videoCol[i].typing == "yt") x += `
+      <iframe class="vidStyle"
+		src="https://www.youtube.com/embed/${videoCol[i].filename}">
+	 </iframe>
+    `;
+    else if (videoCol[i].typing == "video/webm") x += `
+	 <video class="vidStyle" controls>
+	    <source src="${videoCol[i].filename}" type="video/mp4">
+	    <source src="${videoCol[i].filename}" type="video/ogg">
+	    Your browser does not support the video tag.
+	 </video>`;
+	else if (videoCol[i].typing == "image/jpg") x += `
+      <br><img src="${videoCol[i].filename}" alt="${videoCol[i].name}" class="vidStyle"> 
+    `;
+  else x += `
+      <embed type="${videoCol[i].typing}" src="${videoCol[i].filename}" title="${videoCol[i].name}" class="vidStyle">
+    `; //this works on its own btw as a single line instead of the if-else block, but it's apparently recommended that one uses the format appropriate to the file being sent through the code.
+  }
+  return x;
+}
+
+document.getElementById("putVidsHere").innerHTML = addVids();
+//please note, this will only work w editor on w3school probably!!
+</script>
+
+</html>
