@@ -158,7 +158,16 @@ function dadCar(fileStill, fileVid){
     this.createIt1 = function(){
       return /*HTML*/`
       <div id = "it1" class="pTxt" style="padding-left: 45px;">
-          <span style="color: purple">
+          <div style="background-color: lightgray; height: 20px;">
+              png/jpg: ${this.carName}
+          </div>
+          <div style="margin-left: -2px;"><h1 style="font-family: 'Quicksand';">
+              Navn
+          </h1></div>
+          <div style="margin-top: 15px;">
+              Årstall bil er fra
+          </div>
+          <!---DELETE LATER WHEN I NO LONGER NEED HIM FOR COMFORT <span style="color: purple">
             File name when the tags, the year, and its addition is removed:
           </span>
             ${this.getName()}
@@ -173,7 +182,7 @@ function dadCar(fileStill, fileVid){
           Meanwhile, the extra bit at the end should be: <span style="color: darkcyan">
             ${this.getMod()}
           </span><br>
-          ID: ${this.getAlt()}
+          ID: ${this.getAlt()}---->
       </div>
       `;
     }

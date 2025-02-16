@@ -58,31 +58,31 @@ const vehicleCollection = [
 
 
 // bruker constructor fra dadCar til å lage videosider
-const vid1 = new dadCar(`2019 vestfold driveout mTekst.jpg`,
+const vid1 = new dadCar(`2019 CLASSIC DRIVE OUT¨ Day 2 Vestfold.jpg`,
     `2019 Day 2 Vestfold Classic Drive Out.mp4`);
-const vid2 = new dadCar(`2019 Jarlsø driveout mTekst.png`,
+const vid2 = new dadCar(`2019 JARLSØ DRIVE OUT.png`,
     `2019 Jarlsø Drive Out.mp4`);
-const vid3 = new dadCar(`2019 Noen av Bilene mTekst.png`,
+const vid3 = new dadCar(`2019 NOEN av BILENE.png`,
     ``, // FILENAME MISSING
 );
 
-const vid4 = new dadCar(`2021 Shelby gt500 mTekst.png`,
+const vid4 = new dadCar(`2021 SHELBY GT500.png`,
     `2021 Shelby Gt500 Mustang.mp4`
 );
-const vid5 = new dadCar(`2022 2016 corvette mTekst.png`,
-    //`https://www.youtube.com/watch?v=CE4ZdZgBWC8`
+const vid5 = new dadCar(`2022 CORVETTE C7 Z06 SUPERCHARGED¨ 2016.png`,
     `CE4ZdZgBWC8.yt`//got a method for making it pure AND for getting the tail
 );
-const vid6 = new dadCar(`2023 1ukenggarage mTekst.png`,
-    `2023 1-Uk Garage.mp4`);
+const vid6 = new dadCar(`2023 1- UK Garage.png`,
+    `2023 1-Uk Garage.mp4`
+);
 
-const vid7 = new dadCar(`2023 2usagarage mTekst.png`,
+const vid7 = new dadCar(`2023 2 - US Garage.png`,
     `2023 2-Us Garage.mp4`
 );
-const vid8 = new dadCar(`2023 3degarage mTekst.png`,
+const vid8 = new dadCar(`2023 3 - Germany Garage.png`,
     `2023 3-De Garage.mp4`
 );
-const vid9 = new dadCar(`2023 aston martin db7 mTekst.png`,
+const vid9 = new dadCar(`2023 Aston Martin DB7 - Vantage Coupe v12.png`,
     `2023 Aston M Db7 - Hd.mp4`
 );
 
