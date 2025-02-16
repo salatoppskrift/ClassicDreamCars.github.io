@@ -26,9 +26,10 @@ function dadCar(fileStill, fileVid){
       let punctuation = (prm).indexOf(".");
       let ending = "";
       for(let i = punctuation; i < (prm).length; i++){
-        let letter = this.carName[i];
+        let letter = prm[i];
         ending += letter;
       }
+      return ending;
     }
     /*this.getPureYTlink = function(){
       let ytVidId = ""
@@ -116,46 +117,7 @@ function dadCar(fileStill, fileVid){
 
       //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
     }
-    // formerly "this.makeImgWclass_it2"
-    this.createIt2 = function(folderName){
-      // gives the INDIVIDUAL image for the object given to it
-      let x = "something should be here";
-      if(this.driveFilm === undefined){ //it only returned the img, realised I needed a check for if the .driveFilm was undefined or not, bc I dont define it when its just the car still images.
-        if (this.getEnd(this.carName) == ".jpeg" || ".jpg") x = `
-        <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
-        `;
-      } else if (this.driveFilm == "CE4ZdZgBWC8"){
-        // "(Årsak: CORS-forespørsel lyktes ikke)" dukket opp...
-        x = `
-        <iframe class="it2" style="height: 562px;"
-          src="https://www.youtube.com/embed/CE4ZdZgBWC8">
-        </iframe>
-        `;
-      } else {
-        //if (this.getEnd(this.driveFilm) == ".mp4")
-        x = `
-        <video class="it2" controls>
-          <source src="movies/${this.driveFilm}" type="video/mp4">
-          <source src="movies/${this.driveFilm}}" type="video/ogg">
-          Your browser does not support the video tag.
-        </video>
-        `;
-        
-      }
-
-      return `
-      <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
-        ${x}
-      </div>
-      `;
-
-
-      /*return `
-      <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
-        <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
-      </div>
-      `;*/
-    }
+    
     this.gråGalleriet = function(arrayName, folderName){
       let sourceVal = folderName;
       /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
@@ -178,7 +140,6 @@ function dadCar(fileStill, fileVid){
 
     this.dddd = function(prm){
       stylebleeeh0LikeSo();
-      //document.getElementsByClassName("bleeeh")[0].style = `background-image: xx;`; How to remove background while looking at the individual cars...
       
       document.getElementById("page").innerHTML = /*HTML*/`
       <div class = "gridTemp1" id="${this.getAlt()}">
@@ -188,26 +149,6 @@ function dadCar(fileStill, fileVid){
 
         <!---GRÅGALLERIET: se bonne_lessers for viewCar()--->
         <div id = "it3"></div>
-      </div>
-      `;
-    };
-    this.eeee = function(){
-      stylebleeeh0LikeSo();
-
-      document.getElementById("page").innerHTML = /*HTML*/`
-      <div class = "gridTemp1" id="${this.getAlt()}">
-        <div id = "it1" class="pTxt" style="padding-left: 45px;">
-          Dette er en side produsert med en funksjon ved navn "eeee"!
-        </div>
-
-        <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
-          <!---${this.makeImgWclass_it2(prm)}--->
-        </div>
-
-        <div id = "it3"> <!---the grey gallery beside the main image--->
-          <div id = "grTmp1pan"></div> <!--NOTE BIG NOTE HERE THIS SHOULD BE ITS OWN FUNCTION SHOULDN'T IT??---->
-        </div>
-
       </div>
       `;
     };
@@ -228,7 +169,8 @@ function dadCar(fileStill, fileVid){
             <span style="color: goldenrod;">
               ${this.carName}</span>.
           <br>
-          The car is from ${this.getYear()}; an okay year!<br><br>
+          The car is from ${this.getYear()}; an okay year! <b>Meanwhile, here I'd like to get just the ending? The ending: <span style="color: darkviolet;">${this.getEnd(this.carName)}</span></b>
+          <br><br>
           The full name of this car is: <span style="color: brown">${this.getFullName()}</span><br>
           Meanwhile, the extra bit at the end should be: <span style="color: darkcyan">
             ${this.getMod()}
@@ -236,5 +178,35 @@ function dadCar(fileStill, fileVid){
           ID: ${this.getAlt()}
       </div>
       `;
-    };
-};
+    }
+    // formerly "this.makeImgWclass_it2"
+    this.createIt2 = function(folderName){
+      // gives the INDIVIDUAL image for the object given to it
+      let x = "something should be here";
+      if(this.driveFilm === undefined){ //checks if Ive given the object a driveFilm or not
+        x = `<img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`;
+      } else if (this.driveFilm == "CE4ZdZgBWC8"){
+        x = `
+        <iframe class="it2" style="height: 562px;"
+          src="https://www.youtube.com/embed/${this.driveFilm}">
+        </iframe>
+        `;
+      } else {
+        //if (this.getEnd(this.driveFilm) == ".mp4")
+        x = `
+        <video class="it2" controls>
+          <source src="movies/${this.driveFilm}" type="video/mp4">
+          <source src="movies/${this.driveFilm}}" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+        `;
+        
+      }
+
+      return /*HTML*/`
+      <div id = "it2">
+        ${x} <!---The actual individual car/driveout video being displayed---->
+      </div>
+      `;
+    }
+}
