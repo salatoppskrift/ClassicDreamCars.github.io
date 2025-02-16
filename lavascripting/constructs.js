@@ -159,30 +159,14 @@ function dadCar(fileStill, fileVid){
       return /*HTML*/`
       <div id = "it1" class="pTxt" style="padding-left: 45px;">
           <div style="background-color: lightgray; height: 20px;">
-              png/jpg: ${this.carName}
+              extra: ${this.getMod()}
           </div>
           <div style="margin-left: -2px;"><h1 style="font-family: 'Quicksand';">
-              Navn
+              Navn: ${this.getName()}
           </h1></div>
           <div style="margin-top: 15px;">
-              Årstall bil er fra
+              Årstall bil er fra: ${this.getYear()}
           </div>
-          <!---DELETE LATER WHEN I NO LONGER NEED HIM FOR COMFORT <span style="color: purple">
-            File name when the tags, the year, and its addition is removed:
-          </span>
-            ${this.getName()}
-          <br>
-            .... file name is ${this.carName.length} units long, the actual name is
-            <span style="color: goldenrod;">
-              ${this.carName}</span>.
-          <br>
-          The car is from ${this.getYear()}; an okay year! <b>Meanwhile, here I'd like to get just the ending? The ending: <span style="color: darkviolet;">ending!!</span></b>
-          <br><br>
-          The full name of this car is: <span style="color: brown">${this.getFullName()}</span><br>
-          Meanwhile, the extra bit at the end should be: <span style="color: darkcyan">
-            ${this.getMod()}
-          </span><br>
-          ID: ${this.getAlt()}---->
       </div>
       `;
     }

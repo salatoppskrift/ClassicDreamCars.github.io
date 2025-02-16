@@ -89,7 +89,7 @@ img.dishImg {
     transform: translate(-50%, -50%);
     bottom: 0;
     align-items: center;
-    background-color: lightgray;
+    background-color: #c7d2d5;
     z-index: 1;
     width: 40%;
     transition: all 2s;

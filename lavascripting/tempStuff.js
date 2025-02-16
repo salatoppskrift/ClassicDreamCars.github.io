@@ -50,8 +50,12 @@ const txtKjrTurer = `
   <br><br>
   <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold"</h2>
   <br>
-  <a href="https://9b2cf235-d98b-477e-9c59-089def9c4371.filesusr.com/ugd/1eab53_2b1c30cfe7104a2f89fca00d67a95ab4.pdf">link 1</a>
-  <a href="https://9b2cf235-d98b-477e-9c59-089def9c4371.filesusr.com/ugd/1eab53_54b6566eaf104a42b4ab70a8e3ffdcd3.pdf">link 2</a>
+    <div style="float: left; padding-right: 179px;">
+      <a href="https://9b2cf235-d98b-477e-9c59-089def9c4371.filesusr.com/ugd/1eab53_2b1c30cfe7104a2f89fca00d67a95ab4.pdf">link 1</a>
+    </div>
+    <div style="float: left;">
+      <a href="https://9b2cf235-d98b-477e-9c59-089def9c4371.filesusr.com/ugd/1eab53_54b6566eaf104a42b4ab70a8e3ffdcd3.pdf">link 2</a>
+    </div>
   <br><br>
   Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. Videre har jeg laget et hefte som omtaler "Sportslige kjøreturer i indre Vestfold". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
   <div style="padding-top: 40px; padding-bottom: 40px;">
@@ -59,14 +63,16 @@ const txtKjrTurer = `
   </div>
 `;
 
+const kntkStyles = "border: 1px solid black; margin-bottom: 15px; padding: 10px;";
+
 const txtKnkt = `
-  <div>
+  <div style="background-color: lavender; ${kntkStyles}">
     Per
   </div>
-  <div>
+  <div style="background-color: aliceblue; ${kntkStyles}">
     9502119
   </div>
-  <div>
+  <div style="background-color: goldenrod; height: 100px; ${kntkStyles}">
     Hvis du ønsker å sende meg en melding angående denne nettsiden, må du gjerne gjøre det på mobiltelefonnummeret angitt her.
   </div>
 `;
