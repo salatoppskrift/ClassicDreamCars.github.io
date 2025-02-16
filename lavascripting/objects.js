@@ -70,8 +70,8 @@ const vid4 = new dadCar(`2021 Shelby gt500 mTekst.png`,
     `2021 Shelby Gt500 Mustang.mp4`
 );
 const vid5 = new dadCar(`2022 2016 corvette mTekst.png`,
-    `https://www.youtube.com/watch?v=CE4ZdZgBWC8`
-    //TRYING THIS NEXT `CE4ZdZgBWC8.yt`
+    //`https://www.youtube.com/watch?v=CE4ZdZgBWC8`
+    `CE4ZdZgBWC8`//WHELP WE'RE TRYING!!!
     //THIS ALONE: `CE4ZdZgBWC8`. Idk why I keep this here, for comfort maybe? yes its for comfort.
 );
 const vid6 = new dadCar(`2023 1ukenggarage mTekst.png`,

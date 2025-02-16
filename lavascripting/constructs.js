@@ -30,14 +30,14 @@ function dadCar(fileStill, fileVid){
         ending += letter;
       }
     }
-    this.getPureYTlink = function(){
+    /*this.getPureYTlink = function(){
       let ytVidId = ""
       for(let i = 0; i < this.driveFilm.indexOf("."); i++){
         let letter = this.driveFilm[i];
         ytVidId += letter;
       }
       return ytVidId;
-    }
+    }*/
     this.getAlt = function(){
       let namus = "";
       for(let i = 0; i < 10; i++){
@@ -119,37 +119,42 @@ function dadCar(fileStill, fileVid){
     // formerly "this.makeImgWclass_it2"
     this.createIt2 = function(folderName){
       // gives the INDIVIDUAL image for the object given to it
-      /*
-      let x = "";
-      if (this.getEnd(this.carName) == ".jpeg" || ".jpg") x = `
-      <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
-      `;
-      else if (this.getEnd(this.driveFilm) == ".mp4") x = `
-      <video class="it2" controls>
-        <source src="movies/${this.driveFilm}" type="video/mp4">
-        <source src="movies/${this.driveFilm}}" type="video/ogg">
-        Your browser does not support the video tag.
-	    </video>
-      `;
-      else if (this.getEnd(this.driveFilm) == ".yt") x = `
-      <iframe class="it2"
-		    src="https://www.youtube.com/embed/${this.getPureYTlink()}">
-	    </iframe>
-      `;
+      let x = "something should be here";
+      if(this.driveFilm === undefined){ //it only returned the img, realised I needed a check for if the .driveFilm was undefined or not, bc I dont define it when its just the car still images.
+        if (this.getEnd(this.carName) == ".jpeg" || ".jpg") x = `
+        <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
+        `;
+      } else if (this.driveFilm == "CE4ZdZgBWC8"){
+        // "(Årsak: CORS-forespørsel lyktes ikke)" dukket opp...
+        x = `
+        <iframe class="it2"
+          src="https://www.youtube.com/embed/CE4ZdZgBWC8">
+        </iframe>
+        `;
+      } else {
+        //if (this.getEnd(this.driveFilm) == ".mp4")
+        x = `
+        <video class="it2" controls>
+          <source src="movies/${this.driveFilm}" type="video/mp4">
+          <source src="movies/${this.driveFilm}}" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+        `;
+        
+      }
 
       return `
       <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
         ${x}
       </div>
       `;
-      */
 
 
-      return /*HMTL*/`
+      /*return `
       <div id = "it2"> <!---The actual individual car/driveout video being displayed---->
         <img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>
       </div>
-      `;
+      `;*/
     }
     this.gråGalleriet = function(arrayName, folderName){
       let sourceVal = folderName;
