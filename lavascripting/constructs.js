@@ -127,7 +127,7 @@ function dadCar(fileStill, fileVid){
       } else if (this.driveFilm == "CE4ZdZgBWC8"){
         // "(Årsak: CORS-forespørsel lyktes ikke)" dukket opp...
         x = `
-        <iframe class="it2"
+        <iframe class="it2" style="height: 562px;"
           src="https://www.youtube.com/embed/CE4ZdZgBWC8">
         </iframe>
         `;
