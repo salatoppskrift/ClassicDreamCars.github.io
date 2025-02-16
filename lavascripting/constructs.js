@@ -31,14 +31,14 @@ function dadCar(fileStill, fileVid){
       }
       return ending;
     }
-    /*this.getPureYTlink = function(){
+    this.getPureYTlink = function(){
       let ytVidId = ""
       for(let i = 0; i < this.driveFilm.indexOf("."); i++){
         let letter = this.driveFilm[i];
         ytVidId += letter;
       }
       return ytVidId;
-    }*/
+    }
     this.getAlt = function(){
       let namus = "";
       for(let i = 0; i < 10; i++){
@@ -86,8 +86,7 @@ function dadCar(fileStill, fileVid){
       }
       return modl;
     }
-    this.giveXfromFile = function(cond1, cond2){
-      // WHITE WHALE: trying to cobble getMod, getName, and getYear into ONE FUNCTION.
+    this.giveXfromFile = function(cond1, cond2){ // WHITE WHALE: trying to cobble getMod, getName, and getYear into ONE FUNCTION.
       // okay wait. maybe this is solvable by just changing the stopper? the year can be created by its own for loop, same with the name, same with the model/extra...
       // year: start [0] end when reaches [3] but somehow turn this into a string... test it out on w3school.
           // I could set the parameter in getYear to 4 but that's not a solution, we'll just get the same issue as with 4 whenever we get a car with a 4 in it!!
@@ -119,7 +118,6 @@ function dadCar(fileStill, fileVid){
     }
     
     this.gråGalleriet = function(arrayName, folderName){
-      let sourceVal = folderName;
       /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
       else sourceVal = folderName;*/
       let entry = "";
@@ -131,21 +129,21 @@ function dadCar(fileStill, fileVid){
           onclick = "viewCar('${}')"*/
           entry += /*HTML*/ `
             <div class = "panhght" onclick = "">
-              <img class = "smallGrey" src="${sourceVal}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
+              <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
             </div>
             `;
           };
         return entry;
     };
 
-    this.dddd = function(prm){
+    this.dddd = function(folderName){
       stylebleeeh0LikeSo();
       
       document.getElementById("page").innerHTML = /*HTML*/`
       <div class = "gridTemp1" id="${this.getAlt()}">
         ${this.createIt1()}
 
-        ${this.createIt2(prm)}
+        ${this.createIt2(folderName)}
 
         <!---GRÅGALLERIET: se bonne_lessers for viewCar()--->
         <div id = "it3"></div>
@@ -169,7 +167,7 @@ function dadCar(fileStill, fileVid){
             <span style="color: goldenrod;">
               ${this.carName}</span>.
           <br>
-          The car is from ${this.getYear()}; an okay year! <b>Meanwhile, here I'd like to get just the ending? The ending: <span style="color: darkviolet;">${this.getEnd(this.carName)}</span></b>
+          The car is from ${this.getYear()}; an okay year! <b>Meanwhile, here I'd like to get just the ending? The ending: <span style="color: darkviolet;">ending!!</span></b>
           <br><br>
           The full name of this car is: <span style="color: brown">${this.getFullName()}</span><br>
           Meanwhile, the extra bit at the end should be: <span style="color: darkcyan">
@@ -182,30 +180,30 @@ function dadCar(fileStill, fileVid){
     // formerly "this.makeImgWclass_it2"
     this.createIt2 = function(folderName){
       // gives the INDIVIDUAL image for the object given to it
-      let x = "something should be here";
+      let x = "Object error! driveVideo namefile missing from objects.js, or the name has been incorrectly put in so it lacks tails (.mp4, .yt (not real))";
       if(this.driveFilm === undefined){ //checks if Ive given the object a driveFilm or not
         x = `<img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`;
-      } else if (this.driveFilm == "CE4ZdZgBWC8"){
-        x = `
-        <iframe class="it2" style="height: 562px;"
-          src="https://www.youtube.com/embed/${this.driveFilm}">
-        </iframe>
-        `;
       } else {
-        //if (this.getEnd(this.driveFilm) == ".mp4")
-        x = `
-        <video class="it2" controls>
-          <source src="movies/${this.driveFilm}" type="video/mp4">
-          <source src="movies/${this.driveFilm}}" type="video/ogg">
-          Your browser does not support the video tag.
-        </video>
-        `;
-        
+        if (this.getEnd(this.driveFilm) == ".yt"){
+          x = `
+          <iframe class="it2" style="height: 562px;"
+            src="https://www.youtube.com/embed/${this.getPureYTlink()}">
+          </iframe>
+          `;
+        } else if (this.getEnd(this.driveFilm) == ".mp4"){
+          x = `
+          <video class="it2" controls>
+            <source src="movies/${this.driveFilm}" type="video/mp4">
+            <source src="movies/${this.driveFilm}}" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          `;
+        }
       }
 
       return /*HTML*/`
       <div id = "it2">
-        ${x} <!---The actual individual car/driveout video being displayed---->
+        ${x} <!---The actual individual car/driveoutvideo being displayed---->
       </div>
       `;
     }

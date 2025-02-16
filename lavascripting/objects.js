@@ -71,8 +71,7 @@ const vid4 = new dadCar(`2021 Shelby gt500 mTekst.png`,
 );
 const vid5 = new dadCar(`2022 2016 corvette mTekst.png`,
     //`https://www.youtube.com/watch?v=CE4ZdZgBWC8`
-    `CE4ZdZgBWC8`//WHELP WE'RE TRYING!!!
-    //THIS ALONE: `CE4ZdZgBWC8`. Idk why I keep this here, for comfort maybe? yes its for comfort.
+    `CE4ZdZgBWC8.yt`//got a method for making it pure AND for getting the tail
 );
 const vid6 = new dadCar(`2023 1ukenggarage mTekst.png`,
     `2023 1-Uk Garage.mp4`);
