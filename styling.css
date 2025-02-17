@@ -3,12 +3,18 @@
     font-family: "Quicksand", serif;
 }
 body
-{ /*background-color: #e5a0a0; WORKING COLOR*/
+{ /*background-color: #e5a0a0;*/
     font-size: 2em;
     align-items: center; text-align: center; }
 
 h1, h2, h3
 { font-family: "Playfair Display"; }
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    cursor: text;
+}
 .bleeeh
 {
     background-color:/* #9efcdd WORKING COLOR*/ #797474; height: 20rem; width: 1fr;

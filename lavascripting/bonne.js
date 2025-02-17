@@ -75,7 +75,7 @@ function pageMain(){
 // BODY end
 // the footer BEGIN
 function foot(){
-  let audi = `<div style="background-color: orange;">Audi 8 v10</div>`
+  let audi = `<div style="background-color: orange;">Nettside lagd 2024-2025.<br><span style="font-size: .8em;">Sist oppdatert: 17.februar</span></div>`
   
   document.getElementById("mehehehe").innerHTML = `${audi}`;
 };

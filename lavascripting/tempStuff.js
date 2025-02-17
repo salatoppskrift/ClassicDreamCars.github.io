@@ -63,9 +63,21 @@ const txtKjrTurer = `
   </div>
 `;
 
-const kntkStyles = "border: 1px solid black; margin-bottom: 15px; padding: 10px;";
+//const kntkStyles = "border: 1px solid black; margin-bottom: 15px; padding: 10px;";
 
-const txtKnkt = `
+const deets = ["Per", "9502119", `<div>Hvis du ønsker å sende meg en melding angående denne nettsiden, må du gjerne gjøre det på mobiltelefonnummeret angitt her.<div>`];
+
+function details(){
+  let a = "";
+  const kntkStyles = ["font-size: 1em; margin-bottom: 15px; padding: 10px; width: 680px;", "height: 100px; text-wrap: break-word; border: 1px solid gray; border-radius: 2px; color: gray; width: 682px;"];
+  for(let i = 0; i < 3; i++){
+    if (i == 2) {a += `<div style="${kntkStyles[0]} ${kntkStyles[1]}" class="prevent-select">${deets[i]}<div>`; break;}
+    a += `<input type="text" placeholder="${deets[i]}" style="${kntkStyles[0]}"><br>`;
+  }
+  return `<form>${a}</form>`;
+}
+
+const txtKnkt = /*`
   <div style="background-color: lavender; ${kntkStyles}">
     Per
   </div>
@@ -75,7 +87,7 @@ const txtKnkt = `
   <div style="background-color: goldenrod; height: 100px; ${kntkStyles}">
     Hvis du ønsker å sende meg en melding angående denne nettsiden, må du gjerne gjøre det på mobiltelefonnummeret angitt her.
   </div>
-`;
+`; */details();
 
 /*
 NOTES::

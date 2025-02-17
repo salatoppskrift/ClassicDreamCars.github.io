@@ -15,7 +15,7 @@ const deler = [om, bilr, intet, filmr, intet, ytbtip, drives, cntct];
 
 // se constructs.js for konstruktor til dadCar!
 
-const MerceBnz = new dadCar(`1970 Mercedes-Benzs SL 280.JPG`);
+const MerceBnz = new dadCar(`1970 Mercedes-Benzs¨ SL 280.JPG`);
 const BmwRS = new dadCar(`1978 BMW R100 RS.JPG`);
 const Clenet = new dadCar(`1978 Clenet Series I Roadster¨ 105250.jpg`);
 const JagXJS = new dadCar(`1989 Jaguar XJS¨ V12.jpg`);
@@ -23,13 +23,13 @@ const JagXJS = new dadCar(`1989 Jaguar XJS¨ V12.jpg`);
 const Bmw850 = new dadCar(`1991 BMW¨ 850i.JPG`);
 
 const DodgVipr = new dadCar(`1997 Dodger Viper GTS.JPG`);
-const PrwlrMull = new dadCar(`2001 Prowler¨ Mullholland Edition.jpeg`);
+const PrwlrMull = new dadCar(`2001 Prowler Mullholland Edition.jpeg`);
 
-const AstMart = new dadCar(`2002 Aston Martin¨ Vantage Stratstone Jubilee Limited Edition.JPG`);
+const AstMart = new dadCar(`2002 Aston Martin Vantage Stratstone Jubilee Limited Edition.JPG`);
 
-const Shelby = new dadCar(`2013 Shelby American.JPG`);
-const Corvtte = new dadCar('2016 Corvette.jpg');
-const MerceGTR = new dadCar(`2019 Mercedes¨AMG GTR.jpeg`);
+const Shelby = new dadCar(`2013 Shelby American¨ GT500.JPG`);
+const Corvtte = new dadCar('2016 Corvette¨ Z06.jpg');
+const MerceGTR = new dadCar(`2019 Mercedes-AMG¨ GTR.jpeg`);
 
 const Porsche911 = new dadCar(`2020 Porsche 911 Turbo S.jpg`);
 

@@ -156,19 +156,72 @@ function dadCar(fileStill, fileVid){
       document.getElementsByClassName("bleeeh")[0].style = `background-image: none; background-color: white;`;
     }
     this.createIt1 = function(){
-      return /*HTML*/`
-      <div id = "it1" class="pTxt" style="padding-left: 45px;">
-          <div style="background-color: lightgray; height: 20px;">
-              extra: ${this.getMod()}
+
+      if(this.driveFilm === undefined) {
+        
+        let modDef = ""; let hyphen = " - "
+        if (this.getMod() !== undefined) modDef = `${this.getMod()}${hyphen}`;
+
+        if (this.carName == Clenet.carName) modDef = `Nr.105/250${hyphen}`;
+        else if (this.carName == AstMart.carName) modDef = `Nr. 4 av 5${hyphen}`;
+        else if (this.carName == MerceGTR.carName) modDef = `${this.getMod()} `; //OR make the " - " into a string and put it as let hyphen = " - " before the if-else block hereand in the else if-statement on line 172, put hyphen = " ";
+        else if (
+          this.carName == PrwlrMull.carName ||
+          this.carName == IndFTR.carName ||
+          this.carName == Porsche911.carName
+        )
+        modDef = "";
+
+        if (this.carName == DodgVipr.carName) extrabit = `<span style="margin-left: 68px">- ${this.getYear()} -<span>`;
+        else
+          extrabit = `${modDef}${this.getYear()}`;
+        
+        x = /*HTML*/`
+        <div id = "it1" class="pTxt" style="padding-left: 45px">
+          <div>
+            ${this.getName()}
           </div>
-          <div style="margin-left: -2px;"><h1 style="font-family: 'Quicksand';">
-              Navn: ${this.getName()}
-          </h1></div>
-          <div style="margin-top: 15px;">
-              Årstall bil er fra: ${this.getYear()}
+          <div style="padding-top: 10px;">
+            ${extrabit}
           </div>
-      </div>
+        </div>
+        `;
+      } else {
+        let top = ""; let bottom = "";
+        let title = this.getName();
+        if (this.carName == vid5.carName) {
+          top = `Filmet ${this.getYear()}`;
+          bottom = this.getMod();
+        }
+        else if (
+          this.carName == vid6.carName ||
+          this.carName == vid7.carName ||
+          this.carName == vid8.carName ||
+          this.carName == vid9.carName
+        ) {
+          top = `Filmet ${this.getYear()}`;
+          bottom = "";
+        }
+        else {
+          top = this.getMod();
+          bottom = this.getYear();
+        }
+
+        x = /*HTML*/`
+        <div id = "it1" class="pTxt" style="padding-left: 45px;">
+            <div style="background-color: lightgray; height: 20px;">
+                ${top}
+            </div>
+            <div style="margin-left: -2px;"><h1 style="font-family: 'Quicksand';">
+                ${title}
+            </h1></div>
+            <div style="margin-top: 15px;">
+                ${bottom}
+            </div>
+        </div>
       `;
+      }
+      return x;
     }
     // formerly "this.makeImgWclass_it2"
     this.createIt2 = function(folderName){
@@ -190,6 +243,10 @@ function dadCar(fileStill, fileVid){
             <source src="movies/${this.driveFilm}}" type="video/ogg">
             Your browser does not support the video tag.
           </video>
+          `;
+        } else {
+          x = `
+          <embed type="video/webm" src="${this.driveFilm}" class="it2">
           `;
         }
       }
