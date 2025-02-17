@@ -23,7 +23,7 @@ const JagXJS = new dadCar(`1989 Jaguar XJS¨ V12.jpg`);
 const Bmw850 = new dadCar(`1991 BMW¨ 850i.JPG`);
 
 const DodgVipr = new dadCar(`1997 Dodger Viper GTS.JPG`);
-const PrwlrMull = new dadCar(`2001 Prowler Mullholland Edition.jpeg`);
+//GONE const PrwlrMull = new dadCar(`2001 Prowler Mullholland Edition.jpeg`);
 
 const AstMart = new dadCar(`2002 Aston Martin Vantage Stratstone Jubilee Limited Edition.JPG`);
 
@@ -52,8 +52,7 @@ const JagXJS = new dadCar(`1989 Jaguar XJS¨ V12.jpg`);
 //const vehicleCollection = [PrwlrMull, MerceGTR, Shelby, car2, car2];
 const vehicleCollection = [
     MerceBnz, BmwRS, Clenet,    JagXJS, Bmw850, DodgVipr,
-    PrwlrMull, AstMart, Shelby, Corvtte, MerceGTR, Porsche911,
-    IndFTR
+    AstMart, Shelby, Corvtte,   MerceGTR, Porsche911, IndFTR
 ];
 
 

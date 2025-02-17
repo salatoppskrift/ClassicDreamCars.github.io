@@ -166,7 +166,7 @@ function dadCar(fileStill, fileVid){
         else if (this.carName == AstMart.carName) modDef = `Nr. 4 av 5${hyphen}`;
         else if (this.carName == MerceGTR.carName) modDef = `${this.getMod()} `; //OR make the " - " into a string and put it as let hyphen = " - " before the if-else block hereand in the else if-statement on line 172, put hyphen = " ";
         else if (
-          this.carName == PrwlrMull.carName ||
+          //GONE this.carName == PrwlrMull.carName ||
           this.carName == IndFTR.carName ||
           this.carName == Porsche911.carName
         )
@@ -209,7 +209,7 @@ function dadCar(fileStill, fileVid){
 
         x = /*HTML*/`
         <div id = "it1" class="pTxt" style="padding-left: 45px;">
-            <div style="background-color: lightgray; height: 20px;">
+            <div style="height: 20px;">
                 ${top}
             </div>
             <div style="margin-left: -2px;"><h1 style="font-family: 'Quicksand';">
