@@ -75,8 +75,8 @@ function pageMain(){
 // BODY end
 // the footer BEGIN
 function foot(){
-  let audi = `<div style="background-color: orange;">Nettside lagd 2024-2025.<br><span style="font-size: .8em;">Sist oppdatert: 17.februar</span></div>`
+  let a = `<div style="background-color: orange;">Nettside utviklet 2024-2025.<br><span style="font-size: .8em;">Sist oppdatert: 17.februar</span></div>`;
   
-  document.getElementById("mehehehe").innerHTML = `${audi}`;
+  document.getElementById("mehehehe").innerHTML = `${a}`;
 };
 // the footer END
