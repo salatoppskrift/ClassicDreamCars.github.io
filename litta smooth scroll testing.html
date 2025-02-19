@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Anchor Example</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            height: 2000px;
+        }
+        section {
+            margin-top: 1000px;
+        }
+    </style>
+</head>
+<body>
+
+<a href="#target">Scroll to Section</a>
+
+<section id="target">Target Section</section>
+
+</body>
+<script>
+  // unbelievable, and just by using css!! ofc!!
+  // SEE https://medium.com/@ryan_forrester_/javascript-scroll-to-anchor-fast-easy-guide-48dde5878fbe FOR FURTHER REFERENCE. Method 3 is the one copied here, as it's most compatible w how I've set up the anchor points (using the href="#gotoThisId" and id = "gotoThisId").
+  // https://devspaceblog.com/accessible-smooth-scroll/ also looks promising!
+</script>
+
+
+</html>

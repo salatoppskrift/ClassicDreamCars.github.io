@@ -2,6 +2,9 @@
     margin: 0; padding: 0;
     font-family: "Quicksand", serif;
 }
+/*
+html { scroll-behavior: smooth; }
+*/
 body
 { /*background-color: #e5a0a0;*/
     font-size: 2em;
@@ -79,7 +82,7 @@ a.noStyleB {color: black; text-decoration: none; font-size: 1rem;}
 }
 /*#it1 {background-color: green;}*/
 #it2 {/*background-color: purple; WORKING COLOR*/ text-align: left;  margin-left: 30px;}
-.it2 {width: var(--gridTemp1imgWidth);}
+.it2 {width: var(--gridTemp1imgWidth); background-color: black;}
 img.dishImg {
     width: 290px; height: 150px;
     object-fit: cover;

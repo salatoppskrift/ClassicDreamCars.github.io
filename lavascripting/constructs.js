@@ -138,12 +138,17 @@ function dadCar(fileStill, fileVid){
 
     this.dddd = function(folderName){
       stylebleeeh0LikeSo();
+
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
       
       document.getElementById("page").innerHTML = /*HTML*/`
       <div class = "gridTemp1" id="${this.getAlt()}">
-        ${this.createIt1()}
+        <div id = "it1and2">
+          ${this.createIt1()}
 
-        ${this.createIt2(folderName)}
+          ${this.createIt2(folderName)}
+        </div>
 
         <!---GRÅGALLERIET: se bonne_lessers for viewCar()--->
         <div id = "it3"></div>
