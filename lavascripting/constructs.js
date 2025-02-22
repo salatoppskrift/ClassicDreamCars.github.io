@@ -23,12 +23,14 @@ function dadCar(fileStill, fileVid){
   this.getEnd = function(prm){ //returns the string filename's file type as a string;
     // PLEASE NOTE!!
     // prm should be this.carName or this.driveFilm!!!
-    let punctuation = (prm).indexOf(".");
-    let ending = "";
-    for(let i = punctuation; i < (prm).length; i++){
-      let letter = prm[i];
-      ending += letter;
-    }
+    if (prm == this.carName || prm == this.driveFilm){
+      let punctuation = (prm).indexOf(".");
+      let ending = "";
+      for(let i = punctuation; i < (prm).length; i++){
+        let letter = prm[i];
+        ending += letter;
+      }  
+    } else ending = "ERROR: parameter for getEnd() must include the .carName/.driveFilm property.";
     return ending;
   }
   this.getPureYTlink = function(){
