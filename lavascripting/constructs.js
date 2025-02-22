@@ -32,6 +32,16 @@ function dadCar(fileStill, fileVid){
         }
       } else ending = "ERROR: parameter must be the .carName/.driveFilm property.";
       
+      // prm should be this.carName or this.driveFilm!!! Otherwise it'll probably return an error.
+      if (prm == this.carName || prm == this.driveFilm) {
+        let punctuation = (prm).indexOf(".");
+        let ending = "";
+        for(let i = punctuation; i < (prm).length; i++){
+          let letter = prm[i];
+          ending += letter;
+        }
+      } else ending = "ERROR: parameter must be the .carName/.driveFilm property.";
+      
       return ending;
     }
     this.getPureYTlink = function(){
@@ -86,12 +96,44 @@ function dadCar(fileStill, fileVid){
       return modl;
     }
     // WHITE WHALE FUNCTION: a function attempting to put getName(), getYear(), getMod(), (and I suppose getEnd() too if I'd the mind to think of that at the time of first writing out the code) all into ONE. See changes older than Feb 22 for the function giveXfromFile().
+    // WHITE WHALE FUNCTION: a function attempting to put getName(), getYear(), getMod(), (and I suppose getEnd() too if I'd the mind to think of that at the time of first writing out the code) all into ONE. See changes older than Feb 22 for the function giveXfromFile().
     this.makeDishImg = function(folderName){
       // gives the image settings for the galleries on the main page
       return `<img class="dishImg" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
 
       //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
     }
+    
+    tempFunction = function(prm){
+      if(this.driveFilm === undefined) { // <- her dukker opp litt problemer. hvis funksjonen IKKE er en this.funksjon, så funker den og den kjører altså endringen med it1and2, men da funker ikke lengre this.parameterne med den, it doesn't want to play w them!
+        x = /*HTML*/ `
+        <div id = "it1" class="pTxt" style="padding-left: 45px">
+          ggg
+          <div style="padding-top: 10px;">
+            hhhh
+          </div>
+        </div>
+      `;
+      } else {
+        let top = "topping"; let title = "tittel"; let bottom = "bottle";
+        x = /*HTML*/`
+        <div id = "it1" class="pTxt" style="padding-left: 45px;">
+            <div style="height: 20px;">
+                ${top}
+            </div>
+            <div style="margin-left: -2px;"><h1 style="font-family: 'Quicksand';">
+                ${title}
+            </h1></div>
+            <div style="margin-top: 15px;">
+                ${bottom}
+            </div>
+        </div>
+        `;
+      }
+
+      document.getElementById("it1and2").innerHTML = x;
+    }
+
     
     tempFunction = function(prm){
       if(this.driveFilm === undefined) { // <- her dukker opp litt problemer. hvis funksjonen IKKE er en this.funksjon, så funker den og den kjører altså endringen med it1and2, men da funker ikke lengre this.parameterne med den, it doesn't want to play w them!
@@ -134,28 +176,13 @@ function dadCar(fileStill, fileVid){
           onclick = "viewCar(${p3}, ${p2}, ${p1})";
           onclick = "viewCar('${}')"*/
           entry += /*HTML*/ `
-            <div class = "panhght" onclick = "">
+            <div class = "panhght" onclick = "tempFunk2(${arrayName[i]}, folderName})">
               <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
             </div>
             `;
           };
         return entry;
     };
-    tempFunk2 = function(this, folderName){
-      document.getElementById("it1and2").innerHTML = /*HTML*/`
-        ${this.createIt1()}
-        ${this.createIt2()}
-      `;
-    }
-    this.createIt1and2 = function(){
-      return `
-      <div id = "it1and2">
-          ${this.createIt1()}
-
-          ${this.createIt2()}
-      </div>
-      `;
-    }
 
     this.dddd = function(folderName){
       stylebleeeh0LikeSo();
@@ -165,7 +192,11 @@ function dadCar(fileStill, fileVid){
       
       document.getElementById("page").innerHTML = /*HTML*/`
       <div class = "gridTemp1" id="${this.getAlt()}">
-        ${createIt1and2()}
+        <div id = "it1and2">
+          ${this.createIt1()}
+
+          ${this.createIt2(folderName)}
+        </div>
 
         <!---GRÅGALLERIET: se bonne_lessers for viewCar()--->
         <div id = "it3"></div>
@@ -177,31 +208,31 @@ function dadCar(fileStill, fileVid){
       document.getElementsByClassName("bleeeh")[0].style.height = "300px";
       document.getElementsByClassName("bleeeh")[0].style = `background-image: none; background-color: white;`;
     }
-    this.createIt1 = function(){
+    this.createIt1 = function(temparg1){
 
-      if(this.driveFilm === undefined) {
+      if(temparg1.driveFilm === undefined) {
         
         let modDef = ""; let hyphen = " - "
-        if (this.getMod() !== undefined) modDef = `${this.getMod()}${hyphen}`;
+        if (temparg1.getMod() !== undefined) modDef = `${temparg1.getMod()}${hyphen}`;
 
-        if (this.carName == Clenet.carName) modDef = `Nr.105/250${hyphen}`;
-        else if (this.carName == AstMart.carName) modDef = `Nr. 4 av 5${hyphen}`;
-        else if (this.carName == MerceGTR.carName) modDef = `${this.getMod()} `; //OR make the " - " into a string and put it as let hyphen = " - " before the if-else block hereand in the else if-statement on line 172, put hyphen = " ";
+        if (temparg1.carName == Clenet.carName) modDef = `Nr.105/250${hyphen}`;
+        else if (temparg1.carName == AstMart.carName) modDef = `Nr. 4 av 5${hyphen}`;
+        else if (temparg1.carName == MerceGTR.carName) modDef = `${temparg1.getMod()} `; //OR make the " - " into a string and put it as let hyphen = " - " before the if-else block hereand in the else if-statement on line 172, put hyphen = " ";
         else if (
           //GONE this.carName == PrwlrMull.carName ||
-          this.carName == IndFTR.carName ||
-          this.carName == Porsche911.carName
+          temparg1.carName == IndFTR.carName ||
+          temparg1.carName == Porsche911.carName
         )
         modDef = "";
 
-        if (this.carName == DodgVipr.carName) extrabit = `<span style="margin-left: 68px">- ${this.getYear()} -<span>`;
+        if (temparg1.carName == DodgVipr.carName) extrabit = `<span style="margin-left: 68px">- ${temparg1.getYear()} -<span>`;
         else
-          extrabit = `${modDef}${this.getYear()}`;
+          extrabit = `${modDef}${temparg1.getYear()}`;
         
         x = /*HTML*/`
         <div id = "it1" class="pTxt" style="padding-left: 45px">
           <div>
-            ${this.getName()}
+            ${temparg1.getName()}
           </div>
           <div style="padding-top: 10px;">
             ${extrabit}
@@ -210,23 +241,23 @@ function dadCar(fileStill, fileVid){
         `;
       } else {
         let top = ""; let bottom = "";
-        let title = this.getName();
-        if (this.carName == vid5.carName) {
-          top = `Filmet ${this.getYear()}`;
-          bottom = this.getMod();
+        let title = temparg1.getName();
+        if (temparg1.carName == vid5.carName) {
+          top = `Filmet ${temparg1.getYear()}`;
+          bottom = temparg1.getMod();
         }
         else if (
-          this.carName == vid6.carName ||
-          this.carName == vid7.carName ||
-          this.carName == vid8.carName ||
-          this.carName == vid9.carName
+          temparg1.carName == vid6.carName ||
+          temparg1.carName == vid7.carName ||
+          temparg1.carName == vid8.carName ||
+          temparg1.carName == vid9.carName
         ) {
-          top = `Filmet ${this.getYear()}`;
+          top = `Filmet ${temparg1.getYear()}`;
           bottom = "";
         }
         else {
-          top = this.getMod();
-          bottom = this.getYear();
+          top = temparg1.getMod();
+          bottom = temparg1.getYear();
         }
 
         x = /*HTML*/`
@@ -246,29 +277,29 @@ function dadCar(fileStill, fileVid){
       return x;
     }
     // formerly "this.makeImgWclass_it2"
-    this.createIt2 = function(folderName){
+    this.createIt2 = function(temparg1, folderName){
       // gives the INDIVIDUAL image for the object given to it
       let x = "Object error! driveVideo namefile missing from objects.js, or the name has been incorrectly put in so it lacks tails (.mp4, .yt (not real))";
-      if(this.driveFilm === undefined){ //checks if Ive given the object a driveFilm or not
-        x = `<img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`;
+      if(temparg1.driveFilm === undefined){ //checks if Ive given the object a driveFilm or not
+        x = `<img class="it2" src="${folderName}/${temparg1.carName}" alt="${temparg1.getAlt()}"></img>`;
       } else {
-        if (this.getEnd(this.driveFilm) == ".yt"){
+        if (temparg1.getEnd(temparg1.driveFilm) == ".yt"){
           x = `
           <iframe class="it2" style="height: 562px;"
-            src="https://www.youtube.com/embed/${this.getPureYTlink()}">
+            src="https://www.youtube.com/embed/${temparg1.getPureYTlink()}">
           </iframe>
           `;
-        } else if (this.getEnd(this.driveFilm) == ".mp4"){
+        } else if (temparg1.getEnd(temparg1.driveFilm) == ".mp4"){
           x = `
           <video class="it2" controls>
-            <source src="movies/${this.driveFilm}" type="video/mp4">
-            <source src="movies/${this.driveFilm}}" type="video/ogg">
+            <source src="movies/${temparg1.driveFilm}" type="video/mp4">
+            <source src="movies/${temparg1.driveFilm}}" type="video/ogg">
             Your browser does not support the video tag.
           </video>
           `;
         } else {
           x = `
-          <embed type="video/webm" src="${this.driveFilm}" class="it2">
+          <embed type="video/webm" src="${temparg1.driveFilm}" class="it2">
           `;
         }
       }
