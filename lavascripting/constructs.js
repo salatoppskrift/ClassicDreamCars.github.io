@@ -23,14 +23,12 @@ function dadCar(fileStill, fileVid){
   this.getEnd = function(prm){ //returns the string filename's file type as a string;
     // PLEASE NOTE!!
     // prm should be this.carName or this.driveFilm!!!
-    if (prm == this.carName || prm == this.driveFilm){
-      let punctuation = (prm).indexOf(".");
-      let ending = "";
-      for(let i = punctuation; i < (prm).length; i++){
-        let letter = prm[i];
-        ending += letter;
-      }  
-    } else ending = "ERROR: parameter for getEnd() must include the .carName/.driveFilm property.";
+    let punctuation = (prm).indexOf(".");
+    let ending = "";
+    for(let i = punctuation; i < (prm).length; i++){
+      let letter = prm[i];
+      ending += letter;
+    }
     return ending;
   }
   this.getPureYTlink = function(){
@@ -95,6 +93,9 @@ function dadCar(fileStill, fileVid){
 
     //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
   }
+  tempoFunky = function(prm){
+    document.getElementById("it1and2").innerHTML = `Okay so this works...${prm}`;
+  };
   
   this.gråGalleriet = function(arrayName, folderName){
     /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
@@ -106,8 +107,9 @@ function dadCar(fileStill, fileVid){
         let p3 = p1[i];
         onclick = "viewCar(${p3}, ${p2}, ${p1})";
         onclick = "viewCar('${}')"*/
+        let tempyVal = `'${arrayName[i].carName}'`;
         entry += /*HTML*/ `
-          <div class = "panhght" onclick = "">
+          <div class = "panhght" onclick = "tempoFunky(${tempyVal})">
             <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
           </div>
           `;
