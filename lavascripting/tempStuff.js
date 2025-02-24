@@ -48,16 +48,22 @@ const txtKjrTurer = `
   <br><br>
   Også i USA er det en rekke fine kjøreturer. Highway 1 i California er kjent for de fleste, men også Blue Ridge Parkway på østkysten kan anbefales.
   <br><br>
-  <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold"</h2>
+  <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold" |</h2>
   <br>
     <div style="float: left; padding-right: 179px;">
-      <a href="https://9b2cf235-d98b-477e-9c59-089def9c4371.filesusr.com/ugd/1eab53_2b1c30cfe7104a2f89fca00d67a95ab4.pdf">link 1</a>
+      <a href="pdfs/Flotte Kjøreturer.pdf">link 1</a>
     </div>
     <div style="float: left;">
-      <a href="https://9b2cf235-d98b-477e-9c59-089def9c4371.filesusr.com/ugd/1eab53_54b6566eaf104a42b4ab70a8e3ffdcd3.pdf">link 2</a>
+      <a href="pdfs/Sportslige Kjøreturer i Indre Vestfold.pdf">link 2</a>
     </div>
   <br><br>
-  Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. Videre har jeg laget et hefte som omtaler "Sportslige kjøreturer i indre Vestfold". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
+  <h2>"Norges 10 Beste Drive Outs"</h2>
+  <br>
+    <div style="float: left; padding-right: 179px;">
+      <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
+    </div>
+  <br><br>
+  Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. Videre har jeg laget et hefte som omtaler "Sportslige kjøreturer i indre Vestfold". For det tredje har jeg skrevet en bok som heter "Norges 10 Beste Drive Outs". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
   <div style="padding-top: 40px; padding-bottom: 40px;">
   Lets Go!
   </div>
