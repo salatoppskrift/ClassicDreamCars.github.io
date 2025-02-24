@@ -93,8 +93,19 @@ function dadCar(fileStill, fileVid){
 
     //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
   }
-  tempoFunky = function(prm){
-    document.getElementById("it1and2").innerHTML = `Okay so this works...${prm}`;
+  sexMachine = function(prm){ // the spit-this-out function...
+    /*return*/ /*HTML*//*`
+      <div style="width: 1000px; margin-left: 20px;">Okay so <i>this thing</i> works...${prm}. <span style="color: cadetblue;">Please note that the width is styled with this entry here, this isn't adopting createIt1 or 2 at all, so we don't have any of the class styles normally present once one has clicked on an item from one of the galleries in the main menus.</span></div>
+    `;*/
+    return `<div style="width: 1000px; margin-left: 20px; font-size: 2rem;">
+      <p><b>Error!</b></p>
+      <p>Denne siden er under konstruksjon!</p>
+      <br/>
+      <p>Vennligst returner til hovedside, klikk deg til et av delene fra navigasjonsbaren under ClassicDreamCars-logoen, eller refresh nettsiden. For å nå bilen/videoen du ønsker å se, klikk deg frem gjennom ett av galleriene på hovedsiden.</p>
+    </div>`;
+  }
+  tempoFunky = function(prm){ // the onclick function...
+    document.getElementById("it1and2").innerHTML = sexMachine(prm);
   };
   
   this.gråGalleriet = function(arrayName, folderName){
@@ -108,6 +119,8 @@ function dadCar(fileStill, fileVid){
         onclick = "viewCar(${p3}, ${p2}, ${p1})";
         onclick = "viewCar('${}')"*/
         let tempyVal = `'${arrayName[i].carName}'`;
+        // *sees line 109: --onclick = "viewCar('${}')"--*
+        // oh, so I might have noticed the thing that was spooking the function so badly... and potentially returning it as object Object repeatedly...?
         entry += /*HTML*/ `
           <div class = "panhght" onclick = "tempoFunky(${tempyVal})">
             <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">

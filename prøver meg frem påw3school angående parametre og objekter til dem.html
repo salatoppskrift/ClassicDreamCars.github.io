@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This is a paragraph.</p>
+<div id="demø"></div>
+<div id="demaø" style="background-color: bisque;"></div>
+<div id="bimo">The div id-ed "bimo": </div>
+
+</body>
+
+<script>
+/*
+    This worked! It's extremely satisfying that I could make so many functions from the base one. Thank you, Javascript developers! Thank you, past coders for making these possible! Thank you resources on the net! <3
+
+    Implementer dette etterhvert?
+*/
+
+function dadCar(fileStill, fileVid){
+    this.carName = fileStill;
+    this.driveFilm = fileVid;
+    this.getPart = function (prm){
+      let year = "";
+      let name = "";
+      let model = "";
+      let end = "";
+      
+      if(prm == "year") {
+        part = year;
+        strtCond = 0;
+        endCond = this.carName.indexOf(" ");
+      }
+      else if(prm == "name") {
+        part = name;
+        strtCond = this.carName.indexOf(" ");
+        if(this.carName.includes("¨"))
+          endCond = this.carName.indexOf("¨");
+        else
+          endCond = this.carName.indexOf(".");
+        //endCond2 = i > this.carName.indexOf(".");
+      }
+      else if(prm == "model") {
+        part = model;
+        if(this.carName.includes("¨"))
+          strtCond = this.carName.indexOf("¨") + 1;
+        else
+          strtCond = this.carName.indexOf(".");
+        endCond = this.carName.indexOf(".");
+      }
+      else if(prm == "end") {
+        part = end;
+        strtCond = this.carName.indexOf(".") + 1;
+        endCond = this.carName.length;
+      }
+      else if(prm != "year" || prm != "name" || prm != "model" || prm != "end") {
+        part = `ERROR: entry must be "year", "name", "model", or "end". Please go to where getPart() is being called.`;
+        strtCond = 0;
+        endCond = this.carName.length;
+      }
+      
+      if (strtCond == undefined) strtCond = 0;
+      if (endCond == undefined) endCond = this.carName.length;
+      
+      for(let i = strtCond; i < endCond; i++){
+        let letter = this.carName[i];
+        part += letter;
+      }
+      
+      return part;
+    }
+    this.getYear = function(){
+      return this.getPart("year");
+    }
+    this.getName = function(){
+      return this.getPart("name");
+    }
+    this.getMod = function(){
+      if (this.carName == Clenet.carName) return " n105/s250";
+      
+      return this.getPart("model");
+    }
+    this.getEnd = function(){
+      return this.getPart("end");
+    }
+    this.getFullName = function(){
+      return this.getName() + this.getMod();
+    }
+    this.getCompleteName = function(){
+      return this.getYear() + this.getFullName();
+    }
+}
+
+const MerceBnz = new dadCar(`1970 Mercedes-Benzs¨ SL 280.JPG`);
+const BmwRS = new dadCar(`1978 BMW R100 RS.JPG`);
+const Clenet = new dadCar(`1978 Clenet Series I Roadster.jpg`);
+
+const vehicleCollection = [ MerceBnz, BmwRS, Clenet ];
+
+function miFunkcing(prm){
+  //maaaDunk(prm);
+  document.getElementById("demaø").innerHTML = myFunk(prm);
+}
+
+/*function maaaDunk(prm){
+  document.getElementById("demaø").innerHTML = myFunk(prm);
+}*/
+
+function myFunk(prm){
+  return prm.getCompleteName(); // change this to whatever you like! <3
+}
+
+for(let i = 0; i < vehicleCollection.length; i++)
+document.getElementById("demø").innerHTML += `<button onclick="miFunkcing(vehicleCollection[${i}])">Klikk meg!!!</button>`;
+
+document.getElementById("bimo").innerHTML += `<span style="color: cadetblue;">${vehicleCollection[0].getFullName()}</span>`;
+
+</script>
+
+</html>
