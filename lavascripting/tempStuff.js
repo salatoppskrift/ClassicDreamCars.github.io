@@ -12,7 +12,7 @@ function usersLists(listparam){
     xx += `<li>${listparam[i]}</li>`;
   }
   return `<ul>${xx}</ul>`;
-}
+};
 
 const txtOm = `
   Min interesse for bil og motor begynte tidlig. Da jeg var fem år kunne jeg navnet på de fleste bilmerkene. Den første bilen (en BMW 2002 tii, 1972 modell) ble kjøpt da jeg var 16 år og møysommelig satt i topp stand til den store dagen (18 år og førerkort). Siden har det blitt svært mange biler, rundt 40 totalt.
@@ -81,7 +81,7 @@ function details(){
     a += `<input type="text" placeholder="${deets[i]}" style="${kntkStyles[0]}"><br>`;
   }
   return `<form>${a}</form>`;
-}
+};
 
 const txtKnkt = /*`
   <div style="background-color: lavender; ${kntkStyles}">

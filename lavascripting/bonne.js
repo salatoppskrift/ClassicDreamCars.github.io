@@ -32,7 +32,7 @@ function navBarItems(){
     let idNameIt = `#${delerNav[i]}`;
     if (i == 4) idNameIt = "#YouTubeTips";
     aaaa += /*HTML*/`<td><a href=${idNameIt} onclick="pageMain()" class="noStyleA">${delerNav[i]}</a></td>`;
-  }
+  };
 
   document.getElementById("navibar").innerHTML = /*HTML*/ `
     <table class="navibar">
@@ -41,7 +41,7 @@ function navBarItems(){
       </tr>
     </table>
   `;
-}
+};
 
 //  Dear diary, today (22-23jan 25) I recall my hubris from previous DRY mistake...
 // Dear diary, today (24jan 25) I realised I'd forgotten to instantialise the variable I needed to have to access the names for the contents on the page (Om, Filmer, etc), and realised that the array I was using was not compatible with the navBar's items, for example in the bar YTtips and Kjøreturer must switch places from how it is on the page, hence I made a new array with the new arrangement and lacking the "intet" ones.

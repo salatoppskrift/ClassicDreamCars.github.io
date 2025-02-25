@@ -19,7 +19,7 @@ function dadCar(fileStill, fileVid){
     let fullName = this.getYear() + " " + this.getName() + " " + this.getMod();
     
     return fullName;
-  }
+  };
   this.getEnd = function(prm){ //returns the string filename's file type as a string;
     // PLEASE NOTE!!
     // *prm* should be this.carName or this.driveFilm!!!
@@ -30,32 +30,32 @@ function dadCar(fileStill, fileVid){
       ending += letter;
     }
     return ending;
-  }
+  };
     this.getFilmEnd = function(){
       return this.getEnd(this.driveFilm);
-    }
+    };
     this.getStillEnd = function(){ // this is not used but who knows!
       return this.getEnd(this.carName);
-    }
+    };
   this.getPureYTlink = function(){
     let ytVidId = ""
     for(let i = 0; i < this.driveFilm.indexOf("."); i++){
       let letter = this.driveFilm[i];
       ytVidId += letter;
-    }
+    };
     return ytVidId;
-  }
+  };
   this.getAlt = function(){
     let namus = "";
     for(let i = this.carName.indexOf(" "); i < 10; i++){
       let letter = this.carName[i];
       namus += letter;
-    }
+    };
     let altNam = namus + "_" + this.getYear();
     let CompleteAlt = (((altNam.replaceAll(" ", "")).replaceAll("-", "")).replaceAll("¨", "")).toLowerCase();
 
     return CompleteAlt;
-  }
+  };
   //this.getName = function(){ return this.giveXfromFile(5, "¨") }
   this.getName = function(){ //removes the year from the name and stops when there's a ¨ or a .
     let namus = "";
@@ -63,7 +63,7 @@ function dadCar(fileStill, fileVid){
       if (i == this.carName.indexOf("¨")) break;
       let letter = this.carName[i];
       namus += letter;
-    }
+    };
     return namus;
   };
   //this.getYear = function(){ return this.giveXfromFile(0, 3); }
@@ -73,9 +73,9 @@ function dadCar(fileStill, fileVid){
     for(let i = 0; i < this.carName.indexOf(" "); i++){
       let letter = this.carName[i];
       year += letter;
-    }
+    };
     return year;
-  }
+  };
   
   this.getMod = function(){ //clunky but works, this delivers the information past the ¨ character if the filename has one.
     let modl = "";
@@ -88,16 +88,16 @@ function dadCar(fileStill, fileVid){
           modl += newLetter;
         };
       };
-    }
+    };
     return modl;
-  }
+  };
   // White whale <3 getXfromFile().
   this.makeDishImg = function(folderName){
     // gives the image settings for the galleries on the main page
     return `<img class="dishImg" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`; // wo onmouseenter and onmouseleave
 
     //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
-  }
+  };
   // moved sexMachine and tempoFunk to OUTSIDE OF THE CONSTRUCTOR.
   
   // also changed this.gråGalleriet to gråGalleriet (no "this").
@@ -125,7 +125,7 @@ function dadCar(fileStill, fileVid){
   stylebleeeh0LikeSo = function(){
     document.getElementsByClassName("bleeeh")[0].style.height = "300px";
     document.getElementsByClassName("bleeeh")[0].style = `background-image: none; background-color: white;`;
-  }
+  };
   this.createIt1 = function(){
 
     if(this.driveFilm === undefined) {
@@ -191,9 +191,9 @@ function dadCar(fileStill, fileVid){
           </div>
       </div>
     `;
-    }
+    };
     return x;
-  }
+  };
   // formerly "this.makeImgWclass_it2"
   this.createIt2 = function(folderName){
     // gives the INDIVIDUAL image for the object given to it
@@ -220,17 +220,17 @@ function dadCar(fileStill, fileVid){
           x = `
           <embed type="video/webm" src="${this.driveFilm}" class="it2">
           `;
-        }
-      }
-    }
+        };
+      };
+    };
 
     return /*HTML*/`
     <div id = "it2">
       ${x} <!---The actual individual car/driveoutvideo being displayed---->
     </div>
     `;
-  }
-}
+  };
+};
 
 // previously on line 96
 // got the idea for this.sexMachine but it didn't quite work out...
@@ -252,7 +252,7 @@ sexMachine = function(prm){ // the spit-this-out function...
     <p><a href="">Vennligst returner til hovedside:</a> klikk på ClassicDreamCars-logoen, klikk deg til et av delene fra navigasjonsbaren <i>under</i> ClassicDreamCars-logoen, eller refresh nettsiden. For å nå bilen/videoen du ønsker å se, klikk deg frem gjennom ett av galleriene på hovedsiden.</p>
   </div>`;
   */
-}
+};
 tempoFunky = function(prm){ // the onclick function...
   document.getElementById("it1and2").innerHTML = sexMachine(prm);
 };
