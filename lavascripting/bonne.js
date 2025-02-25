@@ -4,13 +4,6 @@ topView()
 pageMain();
 foot();
 
-//document.getElementsByClassName("bleeeh")[0].style.backgroundImage = `url("cars/1978 Clenet Series I Roadster¨ 105250.jpg")`;
-//document.getElementsByClassName("bleeeh")[1].style.backgroundImage = `url("cars/1989 Jaguar XJS¨ V12.jpg")`;
-
-  //Dear diary, today (21-22.January) I fixed the DRY thing I had going!
-
-//const titleItems = ["Om", "Biler", "Filmer", "Kjøreturer", "YouTube Tips", "Kontakt"];
-//<img src="cars/1978 Clenet Series I Roadster¨ 105250.jpg" alt="clenet" style="width: 100%;">
 
 function topView(){
     document.getElementsByClassName("bleeeh")[0].innerHTML = /*HTML*/`
@@ -42,9 +35,6 @@ function navBarItems(){
     </table>
   `;
 };
-
-//  Dear diary, today (22-23jan 25) I recall my hubris from previous DRY mistake...
-// Dear diary, today (24jan 25) I realised I'd forgotten to instantialise the variable I needed to have to access the names for the contents on the page (Om, Filmer, etc), and realised that the array I was using was not compatible with the navBar's items, for example in the bar YTtips and Kjøreturer must switch places from how it is on the page, hence I made a new array with the new arrangement and lacking the "intet" ones.
 
 function pageMain(){
     document.getElementById("page").innerHTML = /*HTML*/`

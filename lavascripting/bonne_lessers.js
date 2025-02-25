@@ -11,20 +11,14 @@ function mainForLoops()
         document.getElementsByClassName("pTxt")[3].style.paddingRight = "30px";
       };
     };
-    /*for(let i = 2; i < 4; i++){
-      if (i == 2) document.getElementsByClassName[i].style.width = "";
-      i+=2;
-    }; <--- trying to make the actual galleries stretch to bleeeh's size (how it behaves horizontally, bc I realised too late they weren't supposed to be fixedly contained like the text was!!!*/
     for(let i = 0; i<3; i++){
       let size = "44rem";
       if (i == 1) size = "48rem";
       if (i == 2) size = "28rem";
       document.getElementsByClassName("bleeeh")[i].style.height = size;
-      // this might be where you can change the damned thing...
     };
 };
-//let cgalvar = driveoutVideos.length - 1;
-  
+
 function carGallery(){
   for(let i = 0; i < vehicleCollection.length; i++){
     let a = 0; a++;

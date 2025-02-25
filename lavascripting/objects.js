@@ -8,9 +8,9 @@ const ytbtip = new tittlInnhold("YouTube Tips", txtYT);
 const drives = new tittlInnhold("Kjøreturer m.m.", txtKjrTurer);
 const cntct = new tittlInnhold("Kontakt", txtKnkt);
 
-// lagde en array for lettere å hente titler og innhold til de forskjellige delene av hovedsiden.
-const deler = [om, bilr, intet, filmr, intet, ytbtip, drives, cntct];
 
+// array, henter titler og innhold Hovedsidedelene.
+const deler = [om, bilr, intet, filmr, intet, ytbtip, drives, cntct];
 
 
 // se constructs.js for konstruktor til dadCar!
@@ -35,21 +35,8 @@ const Porsche911 = new dadCar(`2020 Porsche 911 Turbo S.jpg`);
 
 const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
 
-/*
-const PrwlrMull = new dadCar(`2001 Prowler¨ Mullholland Edition.jpeg`);
-const MerceGTR = new dadCar(`2019 Mercedes¨AMG GTR.jpeg`);
-const MerceBnz = new dadCar(`1970 Mercedes-Benzs SL 280.JPG`);
-const Shelby = new dadCar(`2013 Shelby American.JPG`);
-const DodgVipr = new dadCar(`1997 Dodger Viper GTS.JPG`);
-const Corvtte = new dadCar('2016 Corvette.jpg');
-const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
-const Clenet = new dadCar(`1978 Clenet Series I Roadster¨ 105250.jpg`);
-const BmwRS = new dadCar(`1978 BMW R100 RS.JPG`);
-const JagXJS = new dadCar(`1989 Jaguar XJS¨ V12.jpg`);
-*/
 
-// array til å hente biler.
-//const vehicleCollection = [PrwlrMull, MerceGTR, Shelby, car2, car2];
+// array, henter biler.
 const vehicleCollection = [
     MerceBnz, BmwRS, Clenet,    JagXJS, Bmw850, DodgVipr,
     AstMart, Shelby, Corvtte,   MerceGTR, Porsche911, IndFTR
