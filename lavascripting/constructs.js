@@ -230,21 +230,6 @@ function dadCar(fileStill, fileVid){
     </div>
     `;
   };
-  this.sexMachine = function(){ // the spit-this-out function...
-    if (this.driveFilm == undefined) prm = this.carName;
-    else prm = this.driveFilm;
-    
-    let errormess1 = `
-    <div style="font-size: 1.5rem;">
-      <div style="width: 1000px; margin-left: 20px;">Okay so <i>this thing</i> works...${prm}. <span style="color: cadetblue;">Please note that the width is styled with this entry here, this isn't adopting createIt1 or 2 at all, so we don't have any of the class styles normally present once one has clicked on an item from one of the galleries in the main menus.</span></div>
-      <br><br>
-      <div>
-        ${prm}
-      </div>
-    </div>
-    `;
-    return errormess1;
-  };
   this.tempoFunky = function(){ // the onclick function...
     if(this.driveFilm == undefined) x = `image: ${this.carName}`;
     else x = `video: ${this.driveFilm}`;
