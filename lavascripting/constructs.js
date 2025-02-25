@@ -93,43 +93,9 @@ function dadCar(fileStill, fileVid){
 
     //return `<img class="dishImg" onmouseenter="visib()" onmouseleave="invisib()" src="cars/${this.carName}" alt="${this.getAlt()}"></img>`;
   }
-  sexMachine = function(prm){ // the spit-this-out function...
-    /*return `
-      <div style="width: 1000px; margin-left: 20px;">Okay so <i>this thing</i> works...${prm}. <span style="color: cadetblue;">Please note that the width is styled with this entry here, this isn't adopting createIt1 or 2 at all, so we don't have any of the class styles normally present once one has clicked on an item from one of the galleries in the main menus.</span></div>
-    `;
-    */
-    return `<div style="width: 900px; margin-left: 80px; font-size: 2rem;">
-      <p><b>Error:</b></p>
-      <p>Denne siden er under konstruksjon!</p>
-      <br/>
-      <p><a href="">Vennligst returner til hovedside:</a> klikk på ClassicDreamCars-logoen, klikk deg til et av delene fra navigasjonsbaren <i>under</i> ClassicDreamCars-logoen, eller refresh nettsiden. For å nå bilen/videoen du ønsker å se, klikk deg frem gjennom ett av galleriene på hovedsiden.</p>
-    </div>`;
-  }
-  tempoFunky = function(prm){ // the onclick function...
-    document.getElementById("it1and2").innerHTML = sexMachine(prm);
-  };
+  // moved sexMachine and tempoFunk to OUTSIDE OF THE CONSTRUCTOR.
   
-  this.gråGalleriet = function(arrayName, folderName){
-    /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
-    else sourceVal = folderName;*/
-    let entry = "";
-      for(let i = 0; i < arrayName.length; i++){
-        /*let p1 = arrayName;
-        let p2 = sourceVal;
-        let p3 = p1[i];
-        onclick = "viewCar(${p3}, ${p2}, ${p1})";
-        onclick = "viewCar('${}')"*/
-        let tempyVal = `'${arrayName[i].carName}'`;
-        // *sees line 109: --onclick = "viewCar('${}')"--*
-        // oh, so I might have noticed the thing that was spooking the function so badly... and potentially returning it as object Object repeatedly...?
-        entry += /*HTML*/ `
-          <div class = "panhght" onclick = "tempoFunky(${tempyVal})">
-            <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
-          </div>
-          `;
-        };
-      return entry;
-  };
+  // also changed this.gråGalleriet to gråGalleriet (no "this").
 
   this.dddd = function(folderName){
     stylebleeeh0LikeSo();
@@ -258,3 +224,52 @@ function dadCar(fileStill, fileVid){
     `;
   }
 }
+
+// previously on line 96
+// got the idea for this.sexMachine but it didn't quite work out...
+sexMachine = function(prm){ // the spit-this-out function...
+  /*
+  return `
+  <div style="font-size: 1.5rem;">
+    <div style="width: 1000px; margin-left: 20px;">Okay so <i>this thing</i> works...${prm}. <span style="color: cadetblue;">Please note that the width is styled with this entry here, this isn't adopting createIt1 or 2 at all, so we don't have any of the class styles normally present once one has clicked on an item from one of the galleries in the main menus.</span></div>
+    <br><br>
+    <div>
+      ${prm}
+    </div>
+  </div>
+  `;
+ */
+  return `<div style="width: 900px; margin-left: 80px; font-size: 2rem;">
+    <p><b>Error:</b></p>
+    <p>Denne siden er under konstruksjon!</p>
+    <br/>
+    <p><a href="">Vennligst returner til hovedside:</a> klikk på ClassicDreamCars-logoen, klikk deg til et av delene fra navigasjonsbaren <i>under</i> ClassicDreamCars-logoen, eller refresh nettsiden. For å nå bilen/videoen du ønsker å se, klikk deg frem gjennom ett av galleriene på hovedsiden.</p>
+  </div>`;
+}
+tempoFunky = function(prm){ // the onclick function...
+  document.getElementById("it1and2").innerHTML = sexMachine(prm);
+};
+
+// previously right below tempoFunky
+// og hette "this.gråGalleriet"!! Så plutselig at jeg ikke hadde noe this.-biter i denne funksjonen og tenkte (neimen, da trenger vel ikke gråGalleri å være i konstruktor likevel???)
+gråGalleriet = function(arrayName, folderName){
+  /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
+  else sourceVal = folderName;*/
+  let entry = "";
+    for(let i = 0; i < arrayName.length; i++){
+      /*let p1 = arrayName;
+      let p2 = sourceVal;
+      let p3 = p1[i];
+      onclick = "viewCar(${p3}, ${p2}, ${p1})";
+      onclick = "viewCar('${}')"*/
+      let tempyVal = `'${arrayName[i].carName}'`;
+      // *sees line 109: --onclick = "viewCar('${}')"--*
+      // oh, so I might have noticed the thing that was spooking the function so badly... and potentially returning it as object Object repeatedly...?
+      entry += /*HTML*/ `
+        <div class = "panhght" onclick = "tempoFunky(${tempyVal})">
+          <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
+        </div>
+        `;
+      };
+    return entry;
+};

@@ -14,6 +14,14 @@
     This worked! It's extremely satisfying that I could make so many functions from the base one. Thank you, Javascript developers! Thank you, past coders for making these possible! Thank you resources on the net! <3
 
     Implementer dette etterhvert?
+
+    JOURNAL ENTRY: 25feb:
+      SUMMARY: getEnd() og getMod() kommer til å bli vanskelige. getAlt() blir lettere å flette inn i konstruktoren (tror jeg).
+    
+      Gikk fint m getName og getYear, men komplikasjon dukket opp m getEnd() med at den har et parameter så jeg kan skrive om jeg ønsker at den skal hente fra .driveFilm (filmfil, .mp4) eller .carName (stillbilde, .jpg/.jpeg og annen versjon av det)
+
+      getMod() blir også vanskelig fordi jeg har satt if-else setningene for de unike bilene slik som Clener i selve .createIt1-funksjonen! Burde kanskje hatt den i selve getMod()-en så jeg slapp mer rot i .createIt1... Tror jeg ikke gjorde det første gangen jeg skrev koden fordi jeg ikke tenkte på det, men også fordi jeg ville at getMod skulle se ren ut ettersom den var så rar av seg...
+
 */
 
 function dadCar(fileStill, fileVid){
@@ -75,7 +83,7 @@ function dadCar(fileStill, fileVid){
       return this.getPart("name");
     }
     this.getMod = function(){
-      if (this.carName == Clenet.carName) return " n105/s250";
+      if (this.carName == Clenet.carName) return "Nr.105/250";
       
       return this.getPart("model");
     }

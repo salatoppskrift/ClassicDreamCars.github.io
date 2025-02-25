@@ -74,9 +74,10 @@ function ifScrolledEnough(){
 function viewCar(car, folder, carOrDriveCollection){
   car.dddd(folder);
 
+  //TIDLIGERE (24-5.februar): this.gråGalleriet; se i constructs-filen for mer
   document.getElementById("it3").innerHTML = `
     <div id = "grTmp1pan">
-      ${car.gråGalleriet(carOrDriveCollection, folder)}
+      ${gråGalleriet(carOrDriveCollection, folder)}
     </div>
   `;
 };
