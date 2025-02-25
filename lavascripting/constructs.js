@@ -56,8 +56,7 @@ Previously this was an effort to be inclusive of .driveFilm AND .carName, but th
   }
   this.getAlt = function(){
     let namus = "";
-    for(let i = 0; i < 10; i++){
-      if (i < 4 ) continue;
+    for(let i = this.carName.indexOf(" "); i < 10; i++){
       let letter = this.carName[i];
       namus += letter;
     }
