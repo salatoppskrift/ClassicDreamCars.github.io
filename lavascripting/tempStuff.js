@@ -1,3 +1,12 @@
+function usersLists(listparam){
+  let xx = "";
+  for(let i = 0; i < listparam.length; i++){
+    xx += `<li>${listparam[i]}</li>`;
+  }
+  return `<ul>${xx}</ul>`;
+};
+
+// usersLists objects
 const dreamcarRules = [
   "Bilen må være i svært god stand",
   "Bilen må kun ha to dører",
@@ -6,12 +15,23 @@ const dreamcarRules = [
 ];
 const YTreccs = ["Jay Leno's Garage*", "Doug Demuro*", "Seen Through Glass*", "Schmee150*", "Top Gear", "Car TV", "Car WOW", "Daily Driven Exotics", "Harry's Garage*", "Vehicle Virgins", "Petrolicious*", "Dreamcars daily", "Classic Cars", "Series No Cuts*", "Car News TV", "The Drive*", "Curves Magazin*", "Amazing Scenic Drives*", "Roadtrip Through the Lens*"];
 
-function usersLists(listparam){
-  let xx = "";
-  for(let i = 0; i < listparam.length; i++){
-    xx += `<li>${listparam[i]}</li>`;
-  }
-  return `<ul>${xx}</ul>`;
+function Kjøreturer_pdflinksStyled(){
+  return /*HTML*/`
+    <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold" |</h2>
+  <br>
+    <div style="float: left; padding-right: 179px;">
+      <a href="pdfs/Flotte Kjøreturer.pdf">link 1</a>
+    </div>
+    <div style="float: left;">
+      <a href="pdfs/Sportslige Kjøreturer i Indre Vestfold.pdf">link 2</a>
+    </div>
+  <br><br>
+    <h2>"Norges 10 Beste Drive Outs"</h2>
+  <br>
+    <div style="float: left; padding-right: 290px;">
+      <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
+    </div>
+  `;
 };
 
 const txtOm = `
@@ -48,20 +68,7 @@ const txtKjrTurer = `
   <br><br>
   Også i USA er det en rekke fine kjøreturer. Highway 1 i California er kjent for de fleste, men også Blue Ridge Parkway på østkysten kan anbefales.
   <br><br>
-  <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold" |</h2>
-  <br>
-    <div style="float: left; padding-right: 179px;">
-      <a href="pdfs/Flotte Kjøreturer.pdf">link 1</a>
-    </div>
-    <div style="float: left;">
-      <a href="pdfs/Sportslige Kjøreturer i Indre Vestfold.pdf">link 2</a>
-    </div>
-  <br><br>
-  <h2>"Norges 10 Beste Drive Outs"</h2>
-  <br>
-    <div style="float: left; padding-right: 179px;">
-      <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
-    </div>
+    ${Kjøreturer_pdflinksStyled()}
   <br><br>
   Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. Videre har jeg laget et hefte som omtaler "Sportslige kjøreturer i indre Vestfold". For det tredje har jeg skrevet en bok som heter "Norges 10 Beste Drive Outs". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
   <div style="padding-top: 40px; padding-bottom: 40px;">
