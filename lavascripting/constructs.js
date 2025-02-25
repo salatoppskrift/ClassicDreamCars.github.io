@@ -20,6 +20,8 @@ function dadCar(fileStill, fileVid){
     
     return fullName;
   }
+/*
+Previously this was an effort to be inclusive of .driveFilm AND .carName, but then I checked where I actually USE the getEnd() for and realised I use it for checking if .driveFilm is a YT-link or a .mp4-file
   this.getEnd = function(prm){ //returns the string filename's file type as a string;
     // PLEASE NOTE!!
     // prm should be this.carName or this.driveFilm!!!
@@ -27,6 +29,19 @@ function dadCar(fileStill, fileVid){
     let ending = "";
     for(let i = punctuation; i < (prm).length; i++){
       let letter = prm[i];
+      ending += letter;
+    }
+    return ending;
+  }
+*/
+
+  this.getEnd = function(){ //returns the string filename's file type as a string;
+    // PLEASE NOTE!!
+    // prm should be this.carName or this.driveFilm!!!
+    let punctuation = this.driveFilm.indexOf(".");
+    let ending = "";
+    for(let i = punctuation; i < this.driveFilm.length; i++){
+      let letter = this.driveFilm[i];
       ending += letter;
     }
     return ending;
@@ -196,13 +211,13 @@ function dadCar(fileStill, fileVid){
     if(this.driveFilm === undefined){ //checks if Ive given the object a driveFilm or not
       x = `<img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`;
     } else {
-      if (this.getEnd(this.driveFilm) == ".yt"){
+      if (this.getEnd(/*this.driveFilm*/) == ".yt"){
         x = `
         <iframe class="it2" style="height: 562px;"
           src="https://www.youtube.com/embed/${this.getPureYTlink()}">
         </iframe>
         `;
-      } else if (this.getEnd(this.driveFilm) == ".mp4"){
+      } else if (this.getEnd(/*this.driveFilm*/) == ".mp4"){
         x = `
         <video class="it2" controls>
           <source src="movies/${this.driveFilm}" type="video/mp4">
@@ -228,7 +243,6 @@ function dadCar(fileStill, fileVid){
 // previously on line 96
 // got the idea for this.sexMachine but it didn't quite work out...
 sexMachine = function(prm){ // the spit-this-out function...
-  /*
   return `
   <div style="font-size: 1.5rem;">
     <div style="width: 1000px; margin-left: 20px;">Okay so <i>this thing</i> works...${prm}. <span style="color: cadetblue;">Please note that the width is styled with this entry here, this isn't adopting createIt1 or 2 at all, so we don't have any of the class styles normally present once one has clicked on an item from one of the galleries in the main menus.</span></div>
@@ -238,13 +252,14 @@ sexMachine = function(prm){ // the spit-this-out function...
     </div>
   </div>
   `;
- */
+ /*
   return `<div style="width: 900px; margin-left: 80px; font-size: 2rem;">
     <p><b>Error:</b></p>
     <p>Denne siden er under konstruksjon!</p>
     <br/>
     <p><a href="">Vennligst returner til hovedside:</a> klikk på ClassicDreamCars-logoen, klikk deg til et av delene fra navigasjonsbaren <i>under</i> ClassicDreamCars-logoen, eller refresh nettsiden. For å nå bilen/videoen du ønsker å se, klikk deg frem gjennom ett av galleriene på hovedsiden.</p>
   </div>`;
+  */
 }
 tempoFunky = function(prm){ // the onclick function...
   document.getElementById("it1and2").innerHTML = sexMachine(prm);

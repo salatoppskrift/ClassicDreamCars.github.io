@@ -60,6 +60,11 @@ function dadCar(fileStill, fileVid){
         strtCond = this.carName.indexOf(".") + 1;
         endCond = this.carName.length;
       }
+      else if(prm == "altId"){
+        part = altId;
+        strtCond = this.carName.indexOf(" ");
+        endCond = strtCond + 6; //10
+      }
       else if(prm != "year" || prm != "name" || prm != "model" || prm != "end") {
         part = `ERROR: entry must be "year", "name", "model", or "end". Please go to where getPart() is being called.`;
         strtCond = 0;
@@ -74,6 +79,14 @@ function dadCar(fileStill, fileVid){
         part += letter;
       }
       
+      
+      // specifications after the part has been made
+      if(prm == "altId") {
+        a = part + "_" + this.getYear();
+        x = (((a.replaceAll(" ", "")).replaceAll("-", "")).replaceAll("¨", "")).toLowerCase();
+        part = x;
+      }
+      
       return part;
     }
     this.getYear = function(){
@@ -84,14 +97,21 @@ function dadCar(fileStill, fileVid){
     }
     this.getMod = function(){
       if (this.carName == Clenet.carName) return "Nr.105/250";
+      else if (this.carName == AstMart.carName) return "Nr. 4 av 5";
       
       return this.getPart("model");
     }
     this.getEnd = function(){
       return this.getPart("end");
     }
+
     this.getFullName = function(){
       return this.getName() + this.getMod();
+    }
+    this.getAlt = function(){
+      // se linje 84 for hva som tidligere var skrevet her istedenfor i hovedfunksjonen!
+
+      return this.getPart("altId");
     }
     this.getCompleteName = function(){
       return this.getYear() + this.getFullName();
