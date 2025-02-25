@@ -111,9 +111,7 @@ function dadCar(fileStill, fileVid){
     document.getElementById("page").innerHTML = /*HTML*/`
     <div class = "gridTemp1" id="${this.getAlt()}">
       <div id = "it1and2">
-        ${this.createIt1()}
-
-        ${this.createIt2(folderName)}
+        ${this.createIt1and2(folderName)}
       </div>
 
       <!---GRÅGALLERIET: se bonne_lessers for viewCar()--->
@@ -126,6 +124,9 @@ function dadCar(fileStill, fileVid){
     document.getElementsByClassName("bleeeh")[0].style.height = "300px";
     document.getElementsByClassName("bleeeh")[0].style = `background-image: none; background-color: white;`;
   };
+  this.createIt1and2 = function(folderName){
+    return this.createIt1() + this.createIt2(folderName);
+  }
   this.createIt1 = function(){
 
     if(this.driveFilm === undefined) {
@@ -230,11 +231,12 @@ function dadCar(fileStill, fileVid){
     </div>
     `;
   };
-  this.tempoFunky = function(){ // the onclick function...
-    if(this.driveFilm == undefined) x = `image: ${this.carName}`;
-    else x = `video: ${this.driveFilm}`;
-
-    document.getElementById("it1and2").innerHTML = x;
+  this.tempoFunky = function(folderName){ // the onclick function...
+    document.getElementById("it1and2").innerHTML = `
+      ${
+        this.createIt1and2(folderName)
+      }
+    `;
   };
   gråGalleriet = function(arrayName, folderName){
     /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
@@ -253,7 +255,7 @@ function dadCar(fileStill, fileVid){
         if(arrayName[0] == vehicleCollection[0]) tempArrVal = vehicleCollection;
         else if (arrayName[0] == driveoutVideos[0]) tempArrVal = driveoutVideos;
         entry += /*HTML*/ `
-          <div class = "panhght" onclick = "tempArrVal[${i}].tempoFunky('${tempyriVal}')">
+          <div class = "panhght" onclick = "tempArrVal[${i}].tempoFunky('${folderName}')">
             <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
           </div>
           `;
