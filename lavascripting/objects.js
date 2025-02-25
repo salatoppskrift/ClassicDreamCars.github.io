@@ -69,7 +69,7 @@ const vid4 = new dadCar(`2021 SHELBY GT500.png`,
     `2021 Shelby Gt500 Mustang.mp4`
 );
 const vid5 = new dadCar(`2022 CORVETTE C7 Z06 SUPERCHARGED¨ 2016.png`,
-    `CE4ZdZgBWC8.yt`//got a method for making it pure AND for getting the tail
+    `CE4ZdZgBWC8`//got a method for making it pure AND for getting the tail
 );
 const vid6 = new dadCar(`2023 1- UK Garage.png`,
     `2023 1-Uk Garage.mp4`

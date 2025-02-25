@@ -20,11 +20,9 @@ function dadCar(fileStill, fileVid){
     
     return fullName;
   }
-/*
-Previously this was an effort to be inclusive of .driveFilm AND .carName, but then I checked where I actually USE the getEnd() for and realised I use it for checking if .driveFilm is a YT-link or a .mp4-file
   this.getEnd = function(prm){ //returns the string filename's file type as a string;
     // PLEASE NOTE!!
-    // prm should be this.carName or this.driveFilm!!!
+    // *prm* should be this.carName or this.driveFilm!!!
     let punctuation = (prm).indexOf(".");
     let ending = "";
     for(let i = punctuation; i < (prm).length; i++){
@@ -33,19 +31,12 @@ Previously this was an effort to be inclusive of .driveFilm AND .carName, but th
     }
     return ending;
   }
-*/
-
-  this.getEnd = function(){ //returns the string filename's file type as a string;
-    // PLEASE NOTE!!
-    // prm should be this.carName or this.driveFilm!!!
-    let punctuation = this.driveFilm.indexOf(".");
-    let ending = "";
-    for(let i = punctuation; i < this.driveFilm.length; i++){
-      let letter = this.driveFilm[i];
-      ending += letter;
+    this.getFilmEnd = function(){
+      return this.getEnd(this.driveFilm);
     }
-    return ending;
-  }
+    this.getStillEnd = function(){ // this is not used but who knows!
+      return this.getEnd(this.carName);
+    }
   this.getPureYTlink = function(){
     let ytVidId = ""
     for(let i = 0; i < this.driveFilm.indexOf("."); i++){
@@ -210,24 +201,26 @@ Previously this was an effort to be inclusive of .driveFilm AND .carName, but th
     if(this.driveFilm === undefined){ //checks if Ive given the object a driveFilm or not
       x = `<img class="it2" src="${folderName}/${this.carName}" alt="${this.getAlt()}"></img>`;
     } else {
-      if (this.getEnd(/*this.driveFilm*/) == ".yt"){
+      if (!this.driveFilm.includes(".")){
         x = `
         <iframe class="it2" style="height: 562px;"
-          src="https://www.youtube.com/embed/${this.getPureYTlink()}">
+          src="https://www.youtube.com/embed/${this.driveFilm}">
         </iframe>
         `;
-      } else if (this.getEnd(/*this.driveFilm*/) == ".mp4"){
-        x = `
-        <video class="it2" controls>
-          <source src="movies/${this.driveFilm}" type="video/mp4">
-          <source src="movies/${this.driveFilm}}" type="video/ogg">
-          Your browser does not support the video tag.
-        </video>
-        `;
-      } else {
-        x = `
-        <embed type="video/webm" src="${this.driveFilm}" class="it2">
-        `;
+      } else if (this.driveFilm.includes(".")){
+        if (this.getFilmEnd() == ".mp4"){
+          x = `
+          <video class="it2" controls>
+            <source src="movies/${this.driveFilm}" type="video/mp4">
+            <source src="movies/${this.driveFilm}}" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          `;
+        } else {
+          x = `
+          <embed type="video/webm" src="${this.driveFilm}" class="it2">
+          `;
+        }
       }
     }
 
