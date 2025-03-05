@@ -218,17 +218,9 @@ function dadCar(fileStill, fileVid){
       };
   
   gråGalleriet = function(arrayName, folderName){
-    /*if (folderName == "movPreviews") sourceVal = "movPreviewsWOtxt";
-    else sourceVal = folderName;*/
     let entry = "";
       for(let i = 0; i < arrayName.length; i++){
-        /*let p1 = arrayName;
-        let p2 = sourceVal;
-        let p3 = p1[i];
-        onclick = "viewCar(${p3}, ${p2}, ${p1})";
-        onclick = "viewCar('${}')"*/
-        // *sees line 109: --onclick = "viewCar('${}')"--*
-        // oh, so I might have noticed the thing that was spooking the function so badly... and potentially returning it as object Object repeatedly...?
+        
         if(arrayName[i].driveFilm == undefined) tempyriVal = arrayName[i].carName;
         else tempyriVal = arrayName[i].driveFilm;
         if(arrayName[0] == vehicleCollection[0]) tempArrVal = vehicleCollection;

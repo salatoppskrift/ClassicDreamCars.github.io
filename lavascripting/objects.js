@@ -48,9 +48,9 @@ const vid1 = new dadCar(`2019 CLASSIC DRIVE OUT¨ Day 2 Vestfold.jpg`,
     `2019 Day 2 Vestfold Classic Drive Out.mp4`);
 const vid2 = new dadCar(`2019 JARLSØ DRIVE OUT.png`,
     `2019 Jarlsø Drive Out.mp4`);
-const vid3 = new dadCar(`2019 NOEN av BILENE.png`,
+/*const vid3 = new dadCar(`2019 NOEN av BILENE.png`,
     ``, // FILENAME MISSING
-);
+);*/
 
 const vid4 = new dadCar(`2021 SHELBY GT500.png`,
     `2021 Shelby Gt500 Mustang.mp4`
@@ -75,7 +75,7 @@ const vid9 = new dadCar(`2023 Aston Martin DB7 - Vantage Coupe v12.png`,
 
 // array, henter videoer
 const driveoutVideos = [
-    vid1, vid2, vid3,
+    vid1, vid2, /*vid3,*/
     vid4, vid5, vid6,
     vid7, vid8, vid9
 ];
