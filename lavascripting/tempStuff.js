@@ -17,27 +17,27 @@ const YTreccs = ["Jay Leno's Garage*", "Doug Demuro*", "Seen Through Glass*", "S
 
 function Kjøreturer_pdflinksStyled(){
   const lenkeSeksjon = /*HTML*/`
-  <div>
-    <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold" |</h2>
-  <br>
-    <div style="float: left; padding-right: 179px;">
-      <a href="pdfs/Flotte Kjøreturer.pdf">link 1</a>
-    </div>
-    <div style="float: left;">
-      <a href="pdfs/Sportslige Kjøreturer i Indre Vestfold.pdf">link 2</a>
-    </div>
-  <br><br>
-      <h2>"Norges 10 Beste Drive Outs" | "Fantastiske kjøreturer i Vestfold <span style="margin-left: 341.8px;">og Telemark"</span><span style="margin-left: 5px;"> |</span></h2>
+    <div>
+      <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold" |</h2>
     <br>
-      <div style="float: left; padding-right: 293px;">
-        <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
+      <div style="float: left; padding-right: 179px;">
+        <a href="pdfs/Flotte Kjøreturer.pdf">link 1</a>
       </div>
       <div style="float: left;">
-        <a href="pdfs/Fantastiske kjøreturer i Vestfold og Telemark Mars 2025.pdf">link 4</a>
+        <a href="pdfs/Sportslige Kjøreturer i Indre Vestfold.pdf">link 2</a>
       </div>
-  <br>
-</div>
-`;
+    <br><br>
+        <h2>"Norges 10 Beste Drive Outs" | "Fantastiske kjøreturer i Vestfold <span style="margin-left: 341.8px;">og Telemark"</span><span style="margin-left: 5px;"> |</span></h2>
+      <br>
+        <div style="float: left; padding-right: 293px;">
+          <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
+        </div>
+        <div style="float: left;">
+          <a href="pdfs/Fantastiske kjøreturer i Vestfold og Telemark Mars 2025.pdf">link 4</a>
+        </div>
+    <br>
+  </div>
+  `;
   return lenkeSeksjon;
   /*
   <div id="kjøreturPDFlisteGridTESt">
