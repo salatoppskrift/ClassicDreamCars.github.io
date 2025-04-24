@@ -16,7 +16,8 @@ const dreamcarRules = [
 const YTreccs = ["Jay Leno's Garage*", "Doug Demuro*", "Seen Through Glass*", "Schmee150*", "Top Gear", "Car TV", "Car WOW", "Daily Driven Exotics", "Harry's Garage*", "Vehicle Virgins", "Petrolicious*", "Dreamcars daily", "Classic Cars", "Series No Cuts*", "Car News TV", "The Drive*", "Curves Magazin*", "Amazing Scenic Drives*", "Roadtrip Through the Lens*"];
 
 function Kjøreturer_pdflinksStyled(){
-  return /*HTML*/`
+  const lenkeSeksjon = /*HTML*/`
+  <div>
     <h2>"Flotte Kjøreturer"  |  "Sportslige Kjøreturer i Indre Vestfold" |</h2>
   <br>
     <div style="float: left; padding-right: 179px;">
@@ -35,7 +36,9 @@ function Kjøreturer_pdflinksStyled(){
         <a href="pdfs/Fantastiske kjøreturer i Vestfold og Telemark Mars 2025.pdf">link 4</a>
       </div>
   <br>
-  `;
+</div>
+`;
+  return lenkeSeksjon;
   /*
   <div id="kjøreturPDFlisteGridTESt">
     <div>
