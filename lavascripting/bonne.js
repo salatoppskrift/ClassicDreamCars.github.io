@@ -1,5 +1,7 @@
-// bonne as in "bønne" as in java bean
-//immediate view
+// get it bonne as in "bønne" as in java bean
+
+//IMMEDIATE VIEW
+
 topView()
 pageMain();
 foot();

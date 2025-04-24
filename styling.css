@@ -10,8 +10,9 @@ body
     font-size: 2em;
     align-items: center; text-align: center; }
 
-h1, h2, h3
+h1, h2, h3, h1 > span, h2 > span, h3 > span
 { font-family: "Playfair Display"; }
+
 .prevent-select {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -92,6 +93,7 @@ img.dishImg {
 #it3 {grid-column: 1/2; grid-row: 1/4; font-size: 12px;}
 
 
+/*LITTLE THINGS*/
 .note {
     position: fixed;
     left: 50%;
@@ -106,7 +108,12 @@ img.dishImg {
 }
 .hide {opacity: 0; bottom: -10%;}
 .show {opacity: 1; bottom: 30px;}
+#kjøreturPDFlisteGridTESt > div {
+    float: left;
+}
 
+
+/*GRÅGALLERIET*/
 #grTmp1pan {margin-left: 20px; display: grid; grid-template-columns: auto auto; gap: 8px;}
 .panhght{
     background-color: bisque;

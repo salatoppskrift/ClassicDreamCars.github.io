@@ -26,12 +26,37 @@ function Kjøreturer_pdflinksStyled(){
       <a href="pdfs/Sportslige Kjøreturer i Indre Vestfold.pdf">link 2</a>
     </div>
   <br><br>
-    <h2>"Norges 10 Beste Drive Outs"</h2>
+      <h2>"Norges 10 Beste Drive Outs" | "Fantastiske kjøreturer i Vestfold <span style="margin-left: 341.8px;">og Telemark"</span><span style="margin-left: 5px;"> |</span></h2>
+    <br>
+      <div style="float: left; padding-right: 293px;">
+        <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
+      </div>
+      <div style="float: left;">
+        <a href="pdfs/Fantastiske kjøreturer i Vestfold og Telemark Mars 2025.pdf">link 4</a>
+      </div>
   <br>
-    <div style="float: left; padding-right: 290px;">
-      <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
-    </div>
   `;
+  /*
+  <div id="kjøreturPDFlisteGridTESt">
+    <div>
+      <h2>"Tittleting"</h2>
+      <br/>
+      <div>link XYZ</div>
+    </div>
+    <div>
+      <h2> | </h2>
+    </div>
+    <div>
+      <h2>"Tittleting"</h2>
+      <br/>
+      <div>link XYZ</div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  
+  */
 };
 
 const txtOm = `
