@@ -28,7 +28,7 @@ function Kjøreturer_pdflinksStyled(){
         <a href="pdfs/Fantastiske kjøreturer i Vestfold og Telemark Mars 2025.pdf">link 2</a>
       </div>
     <br><br>
-        <h2>"Norges 10 Beste Drive Outs"<span style="margin-left: 5px;"> |</span></h2>
+        <h2>"Norges 10 Beste Drive Outs" |</h2>
       <br>
         <div style="float: left; padding-right: 293px;">
           <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
@@ -96,7 +96,7 @@ const txtKjrTurer = `
   <br><br>
     ${Kjøreturer_pdflinksStyled()}
   <br><br>
-  Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. Videre har jeg laget et hefte som omtaler "Sportslige kjøreturer i indre Vestfold". For det tredje har jeg skrevet en bok som heter "Norges 10 Beste Drive Outs". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
+  Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. Videre har jeg laget et hefte som omtaler "Fantastiske kjøreturer i Vestfold og Telemark". For det tredje har jeg skrevet en bok som heter "Norges 10 Beste Drive Outs". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
   <div style="padding-top: 40px; padding-bottom: 40px;">
   Lets Go!
   </div>
