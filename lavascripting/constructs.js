@@ -114,10 +114,12 @@ function dadCar(fileStill, fileVid){
     return this.createIt1() + this.createIt2(folderName);
   };
       this.createIt1 = function(){
+        // Informasjonen til bil/video over bildet/videoen man ser på. Altså teksten over bilde/video!
 
         if(this.driveFilm === undefined) {
+          // hvis .driveFilm (film) ikke er definert i et objekt, skal objektet bli formatert som et bilde m årsnavn og modellnavn osv.
           
-          let modDef = ""; let hyphen = " - "
+          let modDef = ""; let hyphen = " - ";
           if (this.getMod() !== undefined) modDef = `${this.getMod()}${hyphen}`;
 
           if (this.carName == Clenet.carName) modDef = `Nr.105/250${hyphen}`;
@@ -145,6 +147,7 @@ function dadCar(fileStill, fileVid){
           </div>
           `;
         } else {
+          // ELLERS hvis .driveFilm ER definert, skal den bli lest som en filmfil og vist i formatet jeg ønsker filmer skal bli sett på.
           let top = ""; let bottom = "";
           let title = this.getName();
           if (this.carName == vid5.carName) {
@@ -192,7 +195,7 @@ function dadCar(fileStill, fileVid){
             <iframe class="it2" style="height: 562px;"
               src="https://www.youtube.com/embed/${this.driveFilm}">
             </iframe>
-            `;
+            `; // sjekker først om den ikke er en .ettellerannet fil (yt-ID link)
           } else if (this.driveFilm.includes(".") && this.driveFilm.length > 0){
             if (this.getFilmEnd() == ".mp4"){
               x = `
@@ -221,10 +224,13 @@ function dadCar(fileStill, fileVid){
     let entry = "";
       for(let i = 0; i < arrayName.length; i++){
         
-        if(arrayName[i].driveFilm == undefined) tempyriVal = arrayName[i].carName;
+        /*if(arrayName[i].driveFilm == undefined) tempyriVal = arrayName[i].carName;
         else tempyriVal = arrayName[i].driveFilm;
+        // ^ why is this necessary?*/
+
         if(arrayName[0] == vehicleCollection[0]) tempArrVal = vehicleCollection;
         else if (arrayName[0] == driveoutVideos[0]) tempArrVal = driveoutVideos;
+
         entry += /*HTML*/ `
           <div class = "panhght" onclick = "tempArrVal[${i}].tempoFunky('${folderName}')">
             <img class = "smallGrey" src="${folderName}/${arrayName[i].carName}" alt="${arrayName[i].getAlt()}">
