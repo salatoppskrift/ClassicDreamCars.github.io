@@ -18,20 +18,20 @@ const YTreccs = ["Jay Leno's Garage*", "Doug Demuro*", "Seen Through Glass*", "S
 function Kjøreturer_pdflinksStyled(){
   const lenkeSeksjon = /*HTML*/`
     <div>
-      <h2>"Flotte Kjøreturer"  |  "Fantastiske kjøreturer i Vestfold <span style="margin-left: 218px;">og Telemark" |</span>
+      <h2>"Flotte Kjøreturer"  |  "Norges 10 Beste Drive Outs" |</span>
       </h2>
     <br>
-      <div style="float: left; padding-right: 179px; margin-top: -33px; height: 40px;">
+      <div style="float: left; padding-right: 179px; height: 40px;">
         <a href="pdfs/Flotte Kjøreturer.pdf">link 1</a>
       </div>
       <div style="float: left;">
-        <a href="pdfs/Fantastiske kjøreturer i Vestfold og Telemark Mars 2025.pdf">link 2</a>
+        <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 2</a>
       </div>
     <br><br>
-        <h2>"Norges 10 Beste Drive Outs" |</h2>
+        <h2>"Fantastiske kjøreturer i Vestfold og Telemark" |</h2>
       <br>
         <div style="float: left; padding-right: 293px;">
-          <a href="pdfs/Norges Beste Drive Outs oktober 2024.pdf">link 3</a>
+          <a href="pdfs/Fantastiske kjøreturer i Vestfold og Telemark mars 2025.pdf">link 3</a>
         </div>
     <br>
   </div>
