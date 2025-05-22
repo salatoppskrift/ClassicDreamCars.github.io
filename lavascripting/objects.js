@@ -27,7 +27,7 @@ const DodgVipr = new dadCar(`1997 Dodger Viper GTS.JPG`);
 
 const AstMart = new dadCar(`2002 Aston Martin Vantage Stratstone Jubilee Limited Edition.JPG`);
 
-const Shelby2013 = new dadCar(`2013 Shelby American¨ GT500.JPG`);
+//const Shelby2013 = new dadCar(`2013 Shelby American¨ GT500.JPG`);
 const Corvtte = new dadCar('2016 Corvette¨ Z06.jpg');
 const MerceGTR = new dadCar(`2019 Mercedes-AMG¨ GTR.jpeg`);
 
@@ -41,7 +41,7 @@ const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
 // array, henter biler.
 const vehicleCollection = [
     MerceBnz, BmwRS, Clenet,    JagXJS, Bmw850, DodgVipr,
-    AstMart, Shelby2013, Corvtte,   MerceGTR, Porsche911, Shelby2020,
+    AstMart, /*Shelby2013,*/ Corvtte,   MerceGTR, Porsche911, Shelby2020,
     IndFTR
 ];
 
