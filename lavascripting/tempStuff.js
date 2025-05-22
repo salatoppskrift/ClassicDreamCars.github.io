@@ -96,7 +96,7 @@ const txtKjrTurer = `
   <br><br>
     ${Kjøreturer_pdflinksStyled()}
   <br><br>
-  Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. Videre har jeg laget et hefte som omtaler "Fantastiske kjøreturer i Vestfold og Telemark". For det tredje har jeg skrevet en bok som heter "Norges 10 Beste Drive Outs". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
+  Jeg har skrevet en bok som heter "Flotte Kjøreturer" som omtaler kjøreturer i Norge, Europa og USA. For det andre har jeg skrevet en bok som heter "Norges 10 Beste Drive Outs". Videre har jeg laget en bok som omtaler "Fantastiske kjøreturer i Vestfold og Telemark". Klikker du på pdf-versjoner vedlagt ovenfor, kan du lese om disse kjøreturene.
   <div style="padding-top: 40px; padding-bottom: 40px;">
   Lets Go!
   </div>
