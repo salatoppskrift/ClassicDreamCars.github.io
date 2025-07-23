@@ -40,7 +40,7 @@ const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
 
 // array, henter biler.
 const vehicleCollection = [
-    MerceBnz, BmwRS, Clenet,    JagXJS, Bmw850, DodgVipr,
+    /*MerceBnz,*/ BmwRS, Clenet,    JagXJS, Bmw850, /*DodgVipr,*/
     AstMart, /*Shelby2013,*/ Corvtte,   MerceGTR, Porsche911, Shelby2020,
     IndFTR
 ];
