@@ -67,7 +67,7 @@ function pageMain(){
 // BODY end
 // the footer BEGIN
 function foot(){
-  let a = `<div style="background-color: orange;">Nettside utviklet 2024-2025.<br><span style="font-size: .8em;">Sist oppdatert: 17.februar</span></div>`;
+  let a = `<div style="background-color: orange;">Nettside utviklet 2024-2025.<br><span style="font-size: .8em;">Sist oppdatert: 31.august 2025</span></div>`;
   
   document.getElementById("mehehehe").innerHTML = `${a}`;
 };

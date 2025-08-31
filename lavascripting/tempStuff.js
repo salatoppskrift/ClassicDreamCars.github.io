@@ -13,7 +13,7 @@ const dreamcarRules = [
   "Bilen må ha minst seks sylindre",
   "Bilen må være spesiell, det skal være en “dream car” – kjører man en times tur skal sjansen for å møte en tilsvarende bil være marginal"
 ];
-const YTreccs = ["Jay Leno's Garage*", "Doug Demuro*", "Seen Through Glass*", "Schmee150*", "Top Gear", "Car TV", "Car WOW", "Daily Driven Exotics", "Harry's Garage*", "Vehicle Virgins", "Petrolicious*", "Dreamcars daily", "Classic Cars", "Series No Cuts*", "Car News TV", "The Drive*", "Curves Magazin*", "Amazing Scenic Drives*", "Roadtrip Through the Lens*"];
+const YTreccs = ["Jay Leno's Garage*", "Doug Demuro*", "Seen Through Glass*", "Schmee150*", "Top Gear", "Car TV", "Car WOW", "Daily Driven Exotics", "Harry's Garage*", "Vehicle Virgins", "Petrolicious*", "Dreamcars daily", "Classic Cars", "Series No Cuts*", "Car News TV", "The Drive*", "Curves Magazin*", "Amazing Scenic Drives*", "Roadtrip Through the Lens*", "Bends and Curves"];
 
 function Kjøreturer_pdflinksStyled(){
   const lenkeSeksjon = /*HTML*/`
