@@ -35,14 +35,18 @@ const Porsche911 = new dadCar(`2020 Porsche 911 Turbo S.jpg`);
 
 const Shelby2020 = new dadCar(`2020 Shelby American GT500.jpg`);
 
+const FerrariTribu = new dadCar(`2021 Ferrari F8 Tributo.jpg`);
+
 const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
 
 
 // array, henter biler.
 const vehicleCollection = [
-    /*MerceBnz,*/ BmwRS, Clenet,    JagXJS, Bmw850, /*DodgVipr,*/
-    AstMart, /*Shelby2013,*/ Corvtte,   MerceGTR, Porsche911, Shelby2020,
-    IndFTR
+    /*MerceBnz,*/ BmwRS, Clenet,
+    JagXJS, Bmw850, /*DodgVipr,*/
+    AstMart, /*Shelby2013, Corvtte,*/
+    MerceGTR, Porsche911, Shelby2020,
+    FerrariTribu, IndFTR
 ];
 
 
