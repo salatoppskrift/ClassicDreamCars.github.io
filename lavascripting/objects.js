@@ -42,23 +42,34 @@ const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
 
 // array, henter biler.
 const vehicleCollection = [
-    /*MerceBnz,*/ BmwRS, Clenet,
-    /*JagXJS, Bmw850, DodgVipr,*/
-    AstMart, /*Shelby2013, Corvtte,*/
-    MerceGTR, Porsche911, Shelby2020,
-    FerrariTribu, IndFTR
+    // new dadCar(`1970 Mercedes-Benzs¨ SL 280.JPG`),
+    new dadCar(`1978 BMW R100 RS.JPG`),
+    new dadCar(`1978 Clenet Series I Roadster¨ 105250.jpg`),
+    // new dadCar(`1989 Jaguar XJS¨ V12.jpg`),
+    // new dadCar(`1991 BMW¨ 850i.JPG`),
+    // new dadCar(`1997 Dodger Viper GTS.JPG`),
+    // new dadCar(`2001 Prowler Mullholland Edition.jpeg`),
+    new dadCar(`2002 Aston Martin Vantage Stratstone Jubilee Limited Edition.JPG`),
+    // new dadCar(`2013 Shelby American¨ GT500.JPG`),
+    //new dadCar('2016 Corvette¨ Z06.jpg'),
+    new dadCar(`2019 Mercedes-AMG¨ GTR.jpeg`),
+    new dadCar(`2020 Porsche 911 Turbo S.jpg`),
+    new dadCar(`2020 Shelby American GT500.jpg`),
+    new dadCar(`2021 Ferrari F8 Tributo.JPG`),
+    new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`)
 ];
 
 
 // bruker constructor fra dadCar til å lage videosider
 const vid1 = new dadCar(`2019 CLASSIC DRIVE OUT¨ Day 2 Vestfold.jpg`,
-    `2019 Day 2 Vestfold Classic Drive Out.mp4`);
+    `2019 Day 2 Vestfold Classic Drive Out.mp4`
+);
 const vid2 = new dadCar(`2019 JARLSØ DRIVE OUT.png`,
-    `2019 Jarlsø Drive Out.mp4`);
+    `2019 Jarlsø Drive Out.mp4`
+);
 /*const vid3 = new dadCar(`2019 NOEN av BILENE.png`,
     ``, // FILENAME MISSING
 );*/
-
 const vid4 = new dadCar(`2021 SHELBY GT500.png`,
     `2021 Shelby Gt500 Mustang.mp4`
 );
@@ -82,7 +93,37 @@ const vid9 = new dadCar(`2023 Aston Martin DB7 - Vantage Coupe v12.png`,
 
 // array, henter videoer
 const driveoutVideos = [
-    vid1, vid2, /*vid3,*/
-    vid4, vid5, vid6,
-    vid7, vid8, vid9
+    new dadCar(
+        `2019 CLASSIC DRIVE OUT¨ Day 2 Vestfold.jpg`,
+        `2019 Day 2 Vestfold Classic Drive Out.mp4`
+    ),
+    new dadCar(
+        `2019 JARLSØ DRIVE OUT.png`,
+        `2019 Jarlsø Drive Out.mp4`
+    ),
+    // new dadCar(`2019 NOEN av BILENE.png`, FILENAME MISSING),
+    new dadCar(
+        `2021 SHELBY GT500.png`,
+        `2021 Shelby Gt500 Mustang.mp4`
+    ), 
+    new dadCar(
+        `2022 CORVETTE C7 Z06 SUPERCHARGED¨ 2016.png`,
+        `CE4ZdZgBWC8`//got a method for making it pure AND for getting the tail
+    ), 
+    new dadCar(
+        `2023 1- UK Garage.png`,
+        `2023 1-Uk Garage.mp4`
+    ),
+    new dadCar(
+        `2023 2 - US Garage.png`,
+        `2023 2-Us Garage.mp4`
+    ), 
+    new dadCar(
+        `2023 3 - Germany Garage.png`,
+        `2023 3-De Garage.mp4`
+    ),
+    new dadCar(
+        `2023 Aston Martin DB7 - Vantage Coupe v12.png`,
+        `2023 Aston M Db7 - Hd.mp4`
+    )
 ];
