@@ -35,7 +35,7 @@ const Porsche911 = new dadCar(`2020 Porsche 911 Turbo S.jpg`);
 
 const Shelby2020 = new dadCar(`2020 Shelby American GT500.jpg`);
 
-const FerrariTribu = new dadCar(`2021 Ferrari F8 Tributo.JPG`);
+const FerrariTribu = new dadCar(`2021 Ferrari F8 Tributo-new.JPG`);
 
 const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
 
