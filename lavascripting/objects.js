@@ -55,7 +55,7 @@ const vehicleCollection = [
     new dadCar(`2019 Mercedes-AMG¨ GTR.jpeg`),
     new dadCar(`2020 Porsche 911 Turbo S.jpg`),
     new dadCar(`2020 Shelby American GT500.jpg`),
-    new dadCar(`2021 Ferrari F8 Tributo.JPG`),
+    new dadCar(`2021 Ferrari F8 Tributo.jpg`),
     new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`)
 ];
 
