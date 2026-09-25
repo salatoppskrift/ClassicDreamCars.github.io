@@ -43,7 +43,7 @@ const IndFTR = new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`);
 // array, henter biler.
 const vehicleCollection = [
     // new dadCar(`1970 Mercedes-Benzs¨ SL 280.JPG`),
-    new dadCar(`1978 BMW R100 RS.JPG`),
+    // new dadCar(`1978 BMW R100 RS.JPG`),
     new dadCar(`1978 Clenet Series I Roadster¨ 105250.jpg`),
     // new dadCar(`1989 Jaguar XJS¨ V12.jpg`),
     // new dadCar(`1991 BMW¨ 850i.JPG`),
@@ -55,8 +55,8 @@ const vehicleCollection = [
     new dadCar(`2019 Mercedes-AMG¨ GTR.jpeg`),
     new dadCar(`2020 Porsche 911 Turbo S.jpg`),
     new dadCar(`2020 Shelby American GT500.jpg`),
-    new dadCar(`2021 Ferrari F8 Tributo.jpg`),
-    new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`)
+    new dadCar(`2021 Ferrari F8 Tributo.jpg`)
+    // new dadCar(`2022 Indian FTR 1200 Carbon Limited Edition.jpg`)
 ];
 
 
