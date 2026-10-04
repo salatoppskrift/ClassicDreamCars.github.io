@@ -45,6 +45,7 @@ const vehicleCollection = [
     // new dadCar(`1970 Mercedes-Benzs¨ SL 280.JPG`),
     // new dadCar(`1978 BMW R100 RS.JPG`),
     new dadCar(`1978 Clenet Series I Roadster¨ 105250.jpg`),
+    new dadCar(`1998 BMW Z3 M Roadster.jpg`),
     // new dadCar(`1989 Jaguar XJS¨ V12.jpg`),
     // new dadCar(`1991 BMW¨ 850i.JPG`),
     // new dadCar(`1997 Dodger Viper GTS.JPG`),
